@@ -1,0 +1,288 @@
+{
+    "version": "8.0",
+    "params": [
+      {
+        "name": "tmp_table_size",
+        "description": "Defines the maximum size of internal in-memory temporary tables created by the MEMORY storage engine and, as of MySQL 8.0.28, the TempTable storage engine. If an internal in-memory temporary table exceeds this size, it is automatically converted to an on-disk internal temporary table. The tmp_table_size variable does not apply to user-created MEMORY tables. User-created TempTable tables are not supported. When using the MEMORY storage engine for internal in-memory temporary tables, the actual size limit is the smaller of tmp_table_size and max_heap_table_size. The max_heap_table_size setting does not apply to TempTable tables. Increase the value of tmp_table_size (and max_heap_table_size if necessary when using the MEMORY storage engine for internal in-memory temporary tables) if you do many advanced GROUP BY queries and you have lots of memory."
+      },
+      {
+        "name":"max_heap_table_size",
+        "description":"This variable sets the maximum size to which user-created MEMORY tables are permitted to grow. The value of the variable is used to calculate MEMORY table MAX_ROWS values. Setting this variable has no effect on any existing MEMORY table, unless the table is re-created with a statement such as CREATE TABLE or altered with ALTER TABLE or TRUNCATE TABLE. A server restart also sets the maximum size of existing MEMORY tables to the global max_heap_table_size value. This variable is also used in conjunction with tmp_table_size to limit the size of internal in-memory tables. "
+      },
+      {
+        "name":"query_prealloc_size",
+        "description":"As of MySQL 8.0.29, query_prealloc_size is deprecated, and setting it no longer has any effect; you should expect its removal in a future release of MySQL"
+      },
+      {
+        "name":"sort_buffer_size",
+        "description":"Each session that must perform a sort allocates a buffer of this size. sort_buffer_size is not specific to any storage engine and applies in a general manner for optimization. At minimum the sort_buffer_size value must be large enough to accommodate fifteen tuples in the sort buffer. Also, increasing the value of max_sort_length may require increasing the value of sort_buffer_size. If you see many Sort_merge_passes per second in SHOW GLOBAL STATUS output, you can consider increasing the sort_buffer_size value to speed up ORDER BY or GROUP BY operations that cannot be improved with query optimization or improved indexing. The optimizer tries to work out how much space is needed but can allocate more, up to the limit. Setting it larger than required globally slows down most queries that perform sorts. It is best to increase it as a session setting, and only for the sessions that need a larger size. On Linux, there are thresholds of 256KB and 2MB where larger values may significantly slow down memory allocation, so you should consider staying below one of those values."
+      },
+      {
+        "name": "innodb_buffer_pool_size",
+        "description":"The size in bytes of the buffer pool, the memory area where InnoDB caches table and index data. The maximum value depends on the CPU architecture. When the size of the buffer pool is greater than 1GB, setting innodb_buffer_pool_instances to a value greater than 1 can improve the scalability on a busy server. A larger buffer pool requires less disk I/O to access the same table data more than once. On a dedicated database server, you might set the buffer pool size to 80% of the machine's physical memory size. "
+      },
+      {
+        "name": "innodb_max_dirty_pages_pct_lwm",
+        "description":"Defines a low water mark representing the percentage of dirty pages at which preflushing is enabled to control the dirty page ratio. A value of 0 disables the pre-flushing behavior entirely. The configured value should always be lower than the innodb_max_dirty_pages_pct value. "
+      },
+      {
+        "name": "innodb_purge_threads",
+        "description": "The number of background threads devoted to the InnoDB purge operation. Increasing the value creates additional purge threads, which can improve efficiency on systems where DML operations are performed on multiple tables."
+      },
+      {
+        "name": "table_open_cache_instances",
+        "description":"The number of open tables cache instances. To improve scalability by reducing contention among sessions, the open tables cache can be partitioned into several smaller cache instances of size table_open_cache / table_open_cache_instances. A value of 8 or 16 is recommended on systems that routinely use 16 or more cores. However, if you have many large triggers on your tables that cause a high memory load, the default setting for table_open_cache_instances might lead to excessive memory usage. "
+      },
+      {
+        "name":"innodb_compression_failure_threshold_pct",
+        "description":"Defines the compression failure rate threshold for a table, as a percentage, at which point MySQL begins adding padding within compressed pages to avoid expensive compression failures. When this threshold is passed, MySQL begins to leave additional free space within each new compressed page, dynamically adjusting the amount of free space up to the percentage of page size specified by innodb_compression_pad_pct_max. A value of zero disables the mechanism that monitors compression efficiency and dynamically adjusts the padding amount."
+      },
+      {
+        "name":"innodb_change_buffering",
+        "description":"Whether InnoDB performs change buffering, an optimization that delays write operations to secondary indexes so that the I/O operations can be performed sequentially. Permitted values are described in the following table. Values may also be specified numerically."
+      },
+      {
+        "name": "innodb_online_alter_log_max_size",
+        "description":"Specifies an upper limit in bytes on the size of the temporary log files used during online DDL operations for InnoDB tables. There is one such log file for each index being created or table being altered. This log file stores data inserted, updated, or deleted in the table during the DDL operation. The temporary log file is extended when needed by the value of innodb_sort_buffer_size, up to the maximum specified by innodb_online_alter_log_max_size. If a temporary log file exceeds the upper size limit, the ALTER TABLE operation fails and all uncommitted concurrent DML operations are rolled back. Thus, a large value for this option allows more DML to happen during an online DDL operation, but also extends the period of time at the end of the DDL operation when the table is locked to apply the data from the log."
+      },
+      {
+        "name":"innodb_purge_batch_size",
+        "description":"Defines the number of undo log pages that purge parses and processes in one batch from the history list. In a multithreaded purge configuration, the coordinator purge thread divides innodb_purge_batch_size by innodb_purge_threads and assigns that number of pages to each purge thread. The innodb_purge_batch_size variable also defines the number of undo log pages that purge frees after every 128 iterations through the undo logs."
+      },
+      {
+        "name":"innodb_lru_scan_depth",
+        "description": "A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool. Primarily of interest to performance experts tuning I/O-intensive workloads. It specifies, per buffer pool instance, how far down the buffer pool LRU page list the page cleaner thread scans looking for dirty pages to flush. This is a background operation performed once per second. A setting smaller than the default is generally suitable for most workloads. A value that is much higher than necessary may impact performance. Only consider increasing the value if you have spare I/O capacity under a typical workload. Conversely, if a write-intensive workload saturates your I/O capacity, decrease the value, especially in the case of a large buffer pool. When tuning innodb_lru_scan_depth, start with a low value and configure the setting upward with the goal of rarely seeing zero free pages. "
+      },
+      {
+        "name":"innodb_max_dirty_pages_pct",
+        "description":"InnoDB tries to flush data from the buffer pool so that the percentage of dirty pages does not exceed this value. The innodb_max_dirty_pages_pct setting establishes a target for flushing activity. It does not affect the rate of flushing. "
+      },
+      {
+        "name":"innodb_write_io_threads",
+        "description": "The number of I/O threads for write operations in InnoDB. The default value is 4. Its counterpart for read threads is innodb_read_io_threads. The number of I/O threads for write operations in InnoDB. The default value is 4. Its counterpart for read threads is innodb_read_io_threads. "
+
+      },
+      {
+        "name":"innodb_stats_transient_sample_pages",
+        "description":"The number of index pages to sample when estimating cardinality and other statistics for an indexed column, such as those calculated by ANALYZE TABLE. The default value is 8. Increasing the value improves the accuracy of index statistics, which can improve the query execution plan, at the expense of increased I/O when opening an InnoDB table or recalculating statistics. Setting a high value for innodb_stats_transient_sample_pages could result in lengthy ANALYZE TABLE execution time. innodb_stats_transient_sample_pages only applies when innodb_stats_persistent is disabled for a table; when innodb_stats_persistent is enabled, innodb_stats_persistent_sample_pages applies instead. Takes the place of innodb_stats_sample_pages. "
+      },
+      {
+        "name":"div_precision_increment",
+        "description":"This variable indicates the number of digits by which to increase the scale of the result of division operations performed with the / operator. The default value is 4. The minimum and maximum values are 0 and 30, respectively. The following example illustrates the effect of increasing the default value."
+      },
+      {
+        "name":"innodb_spin_wait_delay",
+        "description":"The maximum delay between polls for a spin lock. The low-level implementation of this mechanism varies depending on the combination of hardware and operating system, so the delay does not correspond to a fixed time interval. Can be used in combination with the innodb_spin_wait_pause_multiplier variable for greater control over the duration of spin-lock polling delays."
+      },
+      {
+        "name":"innodb_compression_pad_pct_max",
+        "description":"Specifies the maximum percentage that can be reserved as free space within each compressed page, allowing room to reorganize the data and modification log within the page when a compressed table or index is updated and the data might be recompressed. Only applies when innodb_compression_failure_threshold_pct is set to a nonzero value, and the rate of compression failures passes the cutoff point."
+      },
+      {
+        "name":"innodb_read_ahead_threshold",
+        "description":"Controls the sensitivity of linear read-ahead that InnoDB uses to prefetch pages into the buffer pool. If InnoDB reads at least innodb_read_ahead_threshold pages sequentially from an extent (64 pages), it initiates an asynchronous read for the entire following extent. The permissible range of values is 0 to 64. A value of 0 disables read-ahead. For the default of 56, InnoDB must read at least 56 pages sequentially from an extent to initiate an asynchronous read for the following extent."
+      },
+      {
+        "name": "innodb_concurrency_tickets",
+        "description":"With a small innodb_concurrency_tickets value, small transactions that only need to process a few rows compete fairly with larger transactions that process many rows. The disadvantage of a small innodb_concurrency_tickets value is that large transactions must loop through the queue many times before they can complete, which extends the amount of time required to complete their task.With a large innodb_concurrency_tickets value, large transactions spend less time waiting for a position at the end of the queue (controlled by innodb_thread_concurrency) and more time retrieving rows. Large transactions also require fewer trips through the queue to complete their task. The disadvantage of a large innodb_concurrency_tickets value is that too many large transactions running at the same time can starve smaller transactions by making them wait a longer time before executing."
+      },
+      {
+        "name": "innodb_log_write_ahead_size",
+        "description":"Defines the write-ahead block size for the redo log, in bytes. To avoid “read-on-write”, set innodb_log_write_ahead_size to match the operating system or file system cache block size. The default setting is 8192 bytes. Read-on-write occurs when redo log blocks are not entirely cached to the operating system or file system due to a mismatch between write-ahead block size for the redo log and operating system or file system cache block size. Valid values for innodb_log_write_ahead_size are multiples of the InnoDB log file block size (2n). The minimum value is the InnoDB log file block size (512). Write-ahead does not occur when the minimum value is specified. The maximum value is equal to the innodb_page_size value. If you specify a value for innodb_log_write_ahead_size that is larger than the innodb_page_size value, the innodb_log_write_ahead_size setting is truncated to the innodb_page_size value."
+      },
+      {
+        "name":"innodb_change_buffer_max_size",
+        "description":"Maximum size for the InnoDB change buffer, as a percentage of the total size of the buffer pool. You might increase this value for a MySQL server with heavy insert, update, and delete activity, or decrease it for a MySQL server with unchanging data used for reporting. "
+      },
+      {
+        "name":"long_query_time",
+        "description": "If a query takes longer than this many seconds, the server increments the Slow_queries status variable. If the slow query log is enabled, the query is logged to the slow query log file. This value is measured in real time, not CPU time, so a query that is under the threshold on a lightly loaded system might be above the threshold on a heavily loaded one. The minimum and default values of long_query_time are 0 and 10, respectively. The maximum is 31536000, which is 365 days in seconds. The value can be specified to a resolution of microseconds.If a query takes longer than this many seconds, the server increments the Slow_queries status variable. If the slow query log is enabled, the query is logged to the slow query log file. This value is measured in real time, not CPU time, so a query that is under the threshold on a lightly loaded system might be above the threshold on a heavily loaded one. The minimum and default values of long_query_time are 0 and 10, respectively. The maximum is 31536000, which is 365 days in seconds. The value can be specified to a resolution of microseconds."
+      },
+      {
+        "name":"key_cache_block_size",
+        "description":"The size in bytes of blocks in the key cache. The default value is 1024."
+      },
+      {
+        "name":"ngram_token_size",
+        "description":"Defines the n-gram token size for the n-gram full-text parser. The ngram_token_size option is read-only and can only be modified at startup. The default value is 2 (bigram). The maximum value is 10."
+      },
+      {
+        "name": "innodb_autoextend_increment",
+        "description":"The increment size (in megabytes) for extending the size of an auto-extending InnoDB system tablespace file when it becomes full. The default value is 64. The innodb_autoextend_increment setting does not affect file-per-table tablespace files or general tablespace files. These files are auto-extending regardless of the innodb_autoextend_increment setting. The initial extensions are by small amounts, after which extensions occur in increments of 4MB."
+      },
+      {
+        "name":"innodb_sort_buffer_size",
+        "description":"The amount by which the temporary log file is extended when recording concurrent DML during an online DDL operation, and the size of the temporary log file read buffer and write buffer."
+      },
+      {
+        "name":"join_buffer_size",
+        "description":"The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans. In MySQL 8.0.18 and later, this variable also controls the amount of memory used for hash joins. Normally, the best way to get fast joins is to add indexes. Increase the value of join_buffer_size to get a faster full join when adding indexes is not possible. One join buffer is allocated for each full join between two tables. For a complex join between several tables for which indexes are not used, multiple join buffers might be necessary."
+      },
+      {
+        "name": "host_cache_size",
+        "description": "The host_cache_size variable controls the size of the host cache, as well as the size of the Performance Schema host_cache table that exposes the cache contents. Setting host_cache_size has these effects:Setting the size to 0 disables the host cache. With the cache disabled, the server performs a DNS lookup every time a client connects.Changing the size at runtime causes an implicit host cache flushing operation that clears the host cache, truncates the host_cache table, and unblocks any blocked hosts.The default value is autosized to 128, plus 1 for a value of max_connections up to 500, plus 1 for every increment of 20 over 500 in the max_connections value, capped to a limit of 2000."
+      },
+      {
+        "name":"binlog_row_image",
+        "description":"You can cause the server to log full or minimal rows using the binlog_row_image system variable. This variable actually takes one of three possible values, as shown in the following list:full: Log all columns in both the before image and the after image.minimal: Log only those columns in the before image that are required to identify the row to be changed; log only those columns in the after image where a value was specified by the SQL statement, or generated by auto-increment.noblob: Log all columns (same as full), except for BLOB and TEXT columns that are not required to identify rows, or that have not changed."
+      },
+      {
+        "name":"table_open_cache",
+        "description":"The number of open tables for all threads. Increasing this value increases the number of file descriptors that mysqld requires. The effective value of this variable is the greater of the effective value of open_files_limit - 10 - the effective value of max_connections / 2, and 400; You can check whether you need to increase the table cache by checking the Opened_tables status variable. If the value of Opened_tables is large and you do not use FLUSH TABLES often (which just forces all tables to be closed and reopened), then you should increase the value of the table_open_cache variable."
+      },
+      {
+        "name": "innodb_adaptive_max_sleep_delay",
+        "description":"Permits InnoDB to automatically adjust the value of innodb_thread_sleep_delay up or down according to the current workload. Any nonzero value enables automated, dynamic adjustment of the innodb_thread_sleep_delay value, up to the maximum value specified in the innodb_adaptive_max_sleep_delay option. The value represents the number of microseconds. This option can be useful in busy systems, with greater than 16 InnoDB threads. (In practice, it is most valuable for MySQL systems with hundreds or thousands of simultaneous connections.)"
+      },
+      {
+        "name":"innodb_ft_total_cache_size",
+        "description":"The total memory allocated, in bytes, for the InnoDB full-text search index cache for all tables. Creating numerous tables, each with a FULLTEXT search index, could consume a significant portion of available memory. innodb_ft_total_cache_size defines a global memory limit for all full-text search indexes to help avoid excessive memory consumption. If the global limit is reached by an index operation, a forced sync is triggered."
+      },
+      {
+        "name":"read_buffer_size",
+        "description": "Each thread that does a sequential scan for a MyISAM table allocates a buffer of this size (in bytes) for each table it scans. If you do many sequential scans, you might want to increase this value, which defaults to 131072. The value of this variable should be a multiple of 4KB. If it is set to a value that is not a multiple of 4KB, its value is rounded down to the nearest multiple of 4KB. read_buffer_size is also used in one other storage engine-specific way: to determine the memory block size for MEMORY tables."
+      },
+      {
+        "name": "eq_range_index_dive_limit",
+        "description": "This variable indicates the number of equality ranges in an equality comparison condition when the optimizer should switch from using index dives to index statistics in estimating the number of qualifying rows. It applies to evaluation of expressions that have either of these equivalent forms, where the optimizer uses a nonunique index to look up col_name values. In both cases, the expression contains N equality ranges. The optimizer can make row estimates using index dives or index statistics. If eq_range_index_dive_limit is greater than 0, the optimizer uses existing index statistics instead of index dives if there are eq_range_index_dive_limit or more equality ranges. Thus, to permit use of index dives for up to N equality ranges, set eq_range_index_dive_limit to N + 1. To disable use of index statistics and always use index dives regardless of N, set eq_range_index_dive_limit to 0."
+      },
+      {
+        "name": "innodb_flush_log_at_timeout",
+        "description": "Write and flush the logs every N seconds. innodb_flush_log_at_timeout allows the timeout period between flushes to be increased in order to reduce flushing and avoid impacting performance of binary log group commit. The default setting for innodb_flush_log_at_timeout is once per second."
+      },
+      {
+        "name": "key_cache_age_threshold",
+        "description": "This value controls the demotion of buffers from the hot sublist of a key cache to the warm sublist. Lower values cause demotion to happen more quickly. The minimum value is 100. The default value is 300. "
+      },
+      {
+        "name": "range_alloc_block_size",
+        "description": "the size in bytes of blocks that are allocated when doing range optimization.The block size for the byte number is 1024. A value that is not an exact multiple of the block size is rounded down to the next lower multiple of the block size by MySQL Server before storing the value for the system variable."
+      },
+      {
+        "name": "innodb_ft_sort_pll_degree",
+        "description": "Number of threads used in parallel to index and tokenize text in an InnoDB FULLTEXT index when building a search index."
+      },
+      {
+        "name": "innodb_ft_min_token_size",
+        "description": "Minimum length of words that are stored in an InnoDB FULLTEXT index. Increasing this value reduces the size of the index, thus speeding up queries, by omitting common words that are unlikely to be significant in a search context, such as the English words “a” and “to”. For content using a CJK (Chinese, Japanese, Korean) character set, specify a value of 1."
+      },
+      {
+        "name": "innodb_read_io_threads",
+        "description": "The number of I/O threads for read operations in InnoDB. Its counterpart for write threads is innodb_write_io_threads. "
+      },
+      {
+        "name": "max_binlog_size",
+        "description": "If a write to the binary log causes the current log file size to exceed the value of this variable, the server rotates the binary logs (closes the current file and opens the next one). The minimum value is 4096 bytes. The maximum and default value is 1GB. Encrypted binary log files have an additional 512-byte header, which is included in max_binlog_size.A transaction is written in one chunk to the binary log, so it is never split between several binary logs. Therefore, if you have big transactions, you might see binary log files larger than max_binlog_size.If max_relay_log_size is 0, the value of max_binlog_size applies to relay logs as well."
+      },
+      {
+        "name": "innodb_table_locks",
+        "description": "If autocommit = 0, InnoDB honors LOCK TABLES; MySQL does not return from LOCK TABLES ... WRITE until all other threads have released all their locks to the table. The default value of innodb_table_locks is 1, which means that LOCK TABLES causes InnoDB to lock a table internally if autocommit = 0.innodb_table_locks = 0 has no effect for tables locked explicitly with LOCK TABLES ... WRITE. It does have an effect for tables locked for read or write by LOCK TABLES ... WRITE implicitly (for example, through triggers) or by LOCK TABLES ... READ."
+      },
+      {
+        "name": "innodb_ft_result_cache_limit",
+        "description": "The InnoDB full-text search query result cache limit (defined in bytes) per full-text search query or per thread. Intermediate and final InnoDB full-text search query results are handled in memory. Use innodb_ft_result_cache_limit to place a size limit on the full-text search query result cache to avoid excessive memory consumption in case of very large InnoDB full-text search query results (millions or hundreds of millions of rows, for example). Memory is allocated as required when a full-text search query is processed. If the result cache size limit is reached, an error is returned indicating that the query exceeds the maximum allowed memory.The maximum value of innodb_ft_result_cache_limit for all platform types and bit sizes is 2**32-1."
+      },
+      {
+        "name": "innodb_purge_rseg_truncate_frequency",
+        "description": "Defines the frequency with which the purge system frees rollback segments in terms of the number of times that purge is invoked. An undo tablespace cannot be truncated until its rollback segments are freed. Normally, the purge system frees rollback segments once every 128 times that purge is invoked. The default value is 128. Reducing this value increases the frequency with which the purge thread frees rollback segments.innodb_purge_rseg_truncate_frequency is intended for use with innodb_undo_log_truncate"
+      },
+      {
+        "name": "max_binlog_stmt_cache_size",
+        "description": "If nontransactional statements within a transaction require more than this many bytes of memory, the server generates an error. The minimum value is 4096. The maximum and default values are 4GB on 32-bit platforms and 16EB (exabytes) on 64-bit platforms.max_binlog_stmt_cache_size sets the size for the statement cache only; the upper limit for the transaction cache is governed exclusively by the max_binlog_cache_size system variable."
+      },
+      {
+        "name": "table_definition_cache",
+        "description": "The number of table definitions that can be stored in the table definition cache. If you use a large number of tables, you can create a large table definition cache to speed up opening of tables. The table definition cache takes less space and does not use file descriptors, unlike the normal table cache. The minimum value is 400. The default value is based on the following formula, capped to a limit of 2000"
+      },
+      {
+        "name": "innodb_thread_sleep_delay",
+        "description": "How long InnoDB threads sleep before joining the InnoDB queue, in microseconds. The default value is 10000. A value of 0 disables sleep. You can set innodb_adaptive_max_sleep_delay to the highest value you would allow for innodb_thread_sleep_delay, and InnoDB automatically adjusts innodb_thread_sleep_delay up or down depending on current thread-scheduling activity. This dynamic adjustment helps the thread scheduling mechanism to work smoothly during times when the system is lightly loaded or when it is operating near full capacity."
+      },
+      {
+        "name": "innodb_adaptive_flushing_lwm",
+        "description": "Defines the low water mark representing percentage of redo log capacity at which adaptive flushing is enabled. "
+      },
+      {
+        "name": "max_write_lock_count",
+        "description": "After this many write locks, permit some pending read lock requests to be processed in between. Write lock requests have higher priority than read lock requests. However, if max_write_lock_count is set to some low value (say, 10), read lock requests may be preferred over pending write lock requests if the read lock requests have already been passed over in favor of 10 write lock requests. Normally this behavior does not occur because max_write_lock_count by default has a very large value."
+      },
+      {
+        "name": "innodb_io_capacity_max",
+        "description": "If flushing activity falls behind, InnoDB can flush more aggressively, at a higher rate of I/O operations per second (IOPS) than defined by the innodb_io_capacity variable. The innodb_io_capacity_max variable defines a maximum number of IOPS performed by InnoDB background tasks in such situations. This option does not control innodb_flush_sync behavior."
+      },
+      {
+        "name": "innodb_max_purge_lag",
+        "description": "Defines the desired maximum purge lag. If this value is exceeded, a delay is imposed on INSERT, UPDATE, and DELETE operations to allow time for purge to catch up. The default value is 0, which means there is no maximum purge lag and no delay."
+      },
+      {
+        "name": "sync_binlog",
+        "description": "Controls how often the MySQL server synchronizes the binary log to disk.sync_binlog=0: Disables synchronization of the binary log to disk by the MySQL server. Instead, the MySQL server relies on the operating system to flush the binary log to disk from time to time as it does for any other file. This setting provides the best performance, but in the event of a power failure or operating system crash, it is possible that the server has committed transactions that have not been synchronized to the binary log.sync_binlog=1: Enables synchronization of the binary log to disk before transactions are committed. This is the safest setting but can have a negative impact on performance due to the increased number of disk writes. In the event of a power failure or operating system crash, transactions that are missing from the binary log are only in a prepared state. This permits the automatic recovery routine to roll back the transactions, which guarantees that no transaction is lost from the binary log.sync_binlog=N, where N is a value other than 0 or 1: The binary log is synchronized to disk after N binary log commit groups have been collected. In the event of a power failure or operating system crash, it is possible that the server has committed transactions that have not been flushed to the binary log. This setting can have a negative impact on performance due to the increased number of disk writes. A higher value improves performance, but with an increased risk of data loss."
+      },
+      {
+        "name": "optimizer_search_depth",
+        "description": "The maximum depth of search performed by the query optimizer. Values larger than the number of relations in a query result in better query plans, but take longer to generate an execution plan for a query. Values smaller than the number of relations in a query return an execution plan quicker, but the resulting plan may be far from being optimal. If set to 0, the system automatically picks a reasonable value."
+      },
+      {
+        "name": "innodb_thread_concurrency",
+        "description": "Use the following guidelines to help find and maintain an appropriate setting: If the number of concurrent user threads for a workload is consistently small and does not affect performance, set innodb_thread_concurrency=0 (no limit).If your workload is consistently heavy or occasionally spikes, set an innodb_thread_concurrency value and adjust it until you find the number of threads that provides the best performance. For example, suppose that your system typically has 40 to 50 users, but periodically the number increases to 60, 70, or more. Through testing, you find that performance remains largely stable with a limit of 80 concurrent users. In this case, set innodb_thread_concurrency to 80.If you do not want InnoDB to use more than a certain number of virtual CPUs for user threads (20 virtual CPUs, for example), set innodb_thread_concurrency to this number (or possibly lower, depending on performance testing). If your goal is to isolate MySQL from other applications, consider binding the mysqld process exclusively to the virtual CPUs. Be aware, however, that exclusive binding can result in non-optimal hardware usage if the mysqld process is not consistently busy. In this case, you can bind the mysqld process to the virtual CPUs but allow other applications to use some or all of the virtual CPUs."
+      },
+      {
+        "name": "thread_cache_size",
+        "description": "How many threads the server should cache for reuse. When a client disconnects, the client's threads are put in the cache if there are fewer than thread_cache_size threads there. Requests for threads are satisfied by reusing threads taken from the cache if possible, and only when the cache is empty is a new thread created. This variable can be increased to improve performance if you have a lot of new connections. Normally, this does not provide a notable performance improvement if you have a good thread implementation. However, if your server sees hundreds of connections per second you should normally set thread_cache_size high enough so that most new connections use cached threads. By examining the difference between the Connections and Threads_created status variables, you can see how efficient the thread cache is. "
+      },
+      {
+        "name": "binlog_group_commit_sync_delay",
+        "description": "Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk. By default binlog_group_commit_sync_delay is set to 0, meaning that there is no delay. Setting binlog_group_commit_sync_delay to a microsecond delay enables more transactions to be synchronized together to disk at once, reducing the overall time to commit a group of transactions because the larger groups require fewer time units per group.When sync_binlog=0 or sync_binlog=1 is set, the delay specified by binlog_group_commit_sync_delay is applied for every binary log commit group before synchronization (or in the case of sync_binlog=0, before proceeding). When sync_binlog is set to a value n greater than 1, the delay is applied after every n binary log commit groups."
+      },
+      {
+        "name": "binlog_group_commit_sync_no_delay_count",
+        "description": "The maximum number of transactions to wait for before aborting the current delay as specified by binlog_group_commit_sync_delay. If binlog_group_commit_sync_delay is set to 0, then this option has no effect."
+      },
+      {
+        "name": "innodb_buffer_pool_dump_pct",
+        "description": "Specifies the percentage of the most recently used pages for each buffer pool to read out and dump. The range is 1 to 100. The default value is 25. For example, if there are 4 buffer pools with 100 pages each, and innodb_buffer_pool_dump_pct is set to 25, the 25 most recently used pages from each buffer pool are dumped."
+      },
+      {
+        "name": "innodb_max_undo_log_size",
+        "description": "Defines a threshold size for undo tablespaces. If an undo tablespace exceeds the threshold, it can be marked for truncation when innodb_undo_log_truncate is enabled. The default value is 1073741824 bytes (1024 MiB)."
+      },
+      {
+        "name":"innodb_log_spin_cpu_abs_lwm",
+        "description":"Defines the minimum amount of CPU usage below which user threads no longer spin while waiting for flushed redo. The value is expressed as a sum of CPU core usage. For example, The default value of 80 is 80% of a single CPU core. On a system with a multi-core processor, a value of 150 represents 100% usage of one CPU core plus 50% usage of a second CPU core."
+      },
+      {
+        "name": "innodb_log_spin_cpu_pct_hwm",
+        "description": "Defines the maximum amount of CPU usage above which user threads no longer spin while waiting for flushed redo. The value is expressed as a percentage of the combined total processing power of all CPU cores. The default value is 50%. For example, 100% usage of two CPU cores is 50% of the combined CPU processing power on a server with four CPU cores.The innodb_log_spin_cpu_pct_hwm variable respects processor affinity. For example, if a server has 48 cores but the mysqld process is pinned to only four CPU cores, the other 44 CPU cores are ignored."
+
+      },
+      {
+        "name": "innodb_log_wait_for_flush_spin_hwm",
+        "description": "Defines the maximum average log flush time beyond which user threads no longer spin while waiting for flushed redo. The default value is 400 microseconds."
+
+      },
+      {
+        "name": "max_relay_log_size",
+        "description": "If a write by a replica to its relay log causes the current log file size to exceed the value of this variable, the replica rotates the relay logs (closes the current file and opens the next one). If max_relay_log_size is 0, the server uses max_binlog_size for both the binary log and the relay log. If max_relay_log_size is greater than 0, it constrains the size of the relay log, which enables you to have different sizes for the two logs. You must set max_relay_log_size to between 4096 bytes and 1GB (inclusive), or to 0. The default value is 0. "
+
+      },
+      {
+        "name": "rpl_read_size",
+        "description": "The rpl_read_size system variable controls the minimum amount of data in bytes that is read from the binary log files and relay log files. If heavy disk I/O activity for these files is impeding performance for the database, increasing the read size might reduce file reads and I/O stalls when the file data is not currently cached by the operating system.The minimum and default value for rpl_read_size is 8192 bytes. The value must be a multiple of 4KB. Note that a buffer the size of this value is allocated for each thread that reads from the binary log and relay log files, including dump threads on sources and coordinator threads on replicas. Setting a large value might therefore have an impact on memory consumption for servers."
+
+      },
+      {
+        "name": "stored_program_definition_cache",
+        "description": "Defines a limit for the number of stored program definition objects, both used and unused, that can be kept in the dictionary object cache.Unused stored program definition objects are only kept in the dictionary object cache when the number in use is less than the capacity defined by stored_program_definition_cache.A setting of 0 means that stored program definition objects are only kept in the dictionary object cache while they are in use.The stored program definition cache partition exists in parallel with the stored procedure and stored function caches that are configured using the stored_program_cache option."
+
+      },
+      {
+        "name": "tablespace_definition_cache",
+        "description": "Defines a limit for the number of tablespace definition objects, both used and unused, that can be kept in the dictionary object cache.Unused tablespace definition objects are only kept in the dictionary object cache when the number in use is less than the capacity defined by tablespace_definition_cache.A setting of 0 means that tablespace definition objects are only kept in the dictionary object cache while they are in use."
+
+      },
+      {
+        "name": "temptable_max_ram",
+        "description": "Defines the maximum amount of memory that can be occupied by the TempTable storage engine before it starts storing data on disk. The default value is 1073741824 bytes (1GiB). "
+      }
+    ]
+}

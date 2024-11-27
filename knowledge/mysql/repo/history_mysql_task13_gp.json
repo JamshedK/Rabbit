@@ -1,0 +1,4080 @@
+{
+  "info": {
+    "objs": [
+      "tps"
+    ],
+    "constraints": []
+  },
+  "data": [
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 450,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 140000000000,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 237,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 105676
+      },
+      "external_metrics": {
+        "tps": 10000.249764077844,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 700,
+        "binlog_group_commit_sync_no_delay_count": 400,
+        "div_precision_increment": 10,
+        "eq_range_index_dive_limit": 16,
+        "host_cache_size": 179219660,
+        "innodb_autoextend_increment": 64000000,
+        "innodb_buffer_pool_size": 120026843545,
+        "innodb_max_dirty_pages_pct": 80.0,
+        "innodb_spin_wait_delay": 150,
+        "innodb_thread_concurrency": 41,
+        "table_definition_cache": 1536
+      },
+      "external_metrics": {
+        "tps": 9842.87923623485,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 1000,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 102400055,
+        "innodb_autoextend_increment": 89600019,
+        "innodb_buffer_pool_size": 157513421772,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 36,
+        "innodb_thread_concurrency": 41,
+        "table_definition_cache": 1479
+      },
+      "external_metrics": {
+        "tps": 9701.894300298796,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 3350,
+        "binlog_group_commit_sync_no_delay_count": 550,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 86,
+        "host_cache_size": 204800055,
+        "innodb_autoextend_increment": 44800019,
+        "innodb_buffer_pool_size": 157513421772,
+        "innodb_max_dirty_pages_pct": 83.8,
+        "innodb_spin_wait_delay": 45,
+        "innodb_thread_concurrency": 45,
+        "table_definition_cache": 105676
+      },
+      "external_metrics": {
+        "tps": 9487.158213924937,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 4300,
+        "binlog_group_commit_sync_no_delay_count": 350,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 38,
+        "host_cache_size": 102400055,
+        "innodb_autoextend_increment": 256000000,
+        "innodb_buffer_pool_size": 87540265318,
+        "innodb_max_dirty_pages_pct": 56.0,
+        "innodb_spin_wait_delay": 50,
+        "innodb_thread_concurrency": 50,
+        "table_definition_cache": 1422
+      },
+      "external_metrics": {
+        "tps": 9413.563945205331,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 200,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 179200083,
+        "innodb_autoextend_increment": 57600100,
+        "innodb_buffer_pool_size": 157513421772,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 237,
+        "innodb_thread_concurrency": 21,
+        "table_definition_cache": 105676
+      },
+      "external_metrics": {
+        "tps": 9391.601224369826,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 350,
+        "binlog_group_commit_sync_no_delay_count": 550,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 86,
+        "host_cache_size": 179200083,
+        "innodb_autoextend_increment": 44800019,
+        "innodb_buffer_pool_size": 157513421772,
+        "innodb_max_dirty_pages_pct": 49.0,
+        "innodb_spin_wait_delay": 244,
+        "innodb_thread_concurrency": 0,
+        "table_definition_cache": 105676
+      },
+      "external_metrics": {
+        "tps": 9356.726602727997,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1450,
+        "binlog_group_commit_sync_no_delay_count": 550,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 409600055,
+        "innodb_autoextend_increment": 44800300,
+        "innodb_buffer_pool_size": 157513421772,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 244,
+        "innodb_thread_concurrency": 41,
+        "table_definition_cache": 1479
+      },
+      "external_metrics": {
+        "tps": 9328.302224589163,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 3199,
+        "binlog_group_commit_sync_no_delay_count": 600,
+        "div_precision_increment": 4,
+        "eq_range_index_dive_limit": 63,
+        "host_cache_size": 256000000,
+        "innodb_autoextend_increment": 204800012,
+        "innodb_buffer_pool_size": 132500000000,
+        "innodb_max_dirty_pages_pct": 81.0,
+        "innodb_spin_wait_delay": 284,
+        "innodb_thread_concurrency": 24,
+        "table_definition_cache": 478
+      },
+      "external_metrics": {
+        "tps": 9294.258922535228,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 350,
+        "binlog_group_commit_sync_no_delay_count": 800,
+        "div_precision_increment": 3,
+        "eq_range_index_dive_limit": 24,
+        "host_cache_size": 76800111,
+        "innodb_autoextend_increment": 64,
+        "innodb_buffer_pool_size": 160000000000,
+        "innodb_max_dirty_pages_pct": 90.9,
+        "innodb_spin_wait_delay": 135,
+        "innodb_thread_concurrency": 35,
+        "table_definition_cache": 52889
+      },
+      "external_metrics": {
+        "tps": 9292.614127150102,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 450,
+        "binlog_group_commit_sync_no_delay_count": 100,
+        "div_precision_increment": 5,
+        "eq_range_index_dive_limit": 8,
+        "host_cache_size": 115200027,
+        "innodb_autoextend_increment": 102400012,
+        "innodb_buffer_pool_size": 177500000000,
+        "innodb_max_dirty_pages_pct": 64.0,
+        "innodb_spin_wait_delay": 147,
+        "innodb_thread_concurrency": 45,
+        "table_definition_cache": 1024
+      },
+      "external_metrics": {
+        "tps": 9275.948561300378,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1450,
+        "binlog_group_commit_sync_no_delay_count": 600,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 86,
+        "host_cache_size": 512000000,
+        "innodb_autoextend_increment": 102400200,
+        "innodb_buffer_pool_size": 157513421772,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 142,
+        "innodb_thread_concurrency": 50,
+        "table_definition_cache": 899
+      },
+      "external_metrics": {
+        "tps": 9215.832496996534,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1200,
+        "binlog_group_commit_sync_no_delay_count": 650,
+        "div_precision_increment": 5,
+        "eq_range_index_dive_limit": 9,
+        "host_cache_size": 204800055,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 176250000000,
+        "innodb_max_dirty_pages_pct": 64.0,
+        "innodb_spin_wait_delay": 142,
+        "innodb_thread_concurrency": 50,
+        "table_definition_cache": 500
+      },
+      "external_metrics": {
+        "tps": 9196.005102383717,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 400,
+        "binlog_group_commit_sync_no_delay_count": 900,
+        "div_precision_increment": 1,
+        "eq_range_index_dive_limit": 29,
+        "host_cache_size": 179219660,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 176250000000,
+        "innodb_max_dirty_pages_pct": 81.0,
+        "innodb_spin_wait_delay": 100,
+        "innodb_thread_concurrency": 0,
+        "table_definition_cache": 1536
+      },
+      "external_metrics": {
+        "tps": 9194.881876710797,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 3350,
+        "binlog_group_commit_sync_no_delay_count": 900,
+        "div_precision_increment": 3,
+        "eq_range_index_dive_limit": 200,
+        "host_cache_size": 230400027,
+        "innodb_autoextend_increment": 204800200,
+        "innodb_buffer_pool_size": 134217728,
+        "innodb_max_dirty_pages_pct": 56.0,
+        "innodb_spin_wait_delay": 192,
+        "innodb_thread_concurrency": 0,
+        "table_definition_cache": 478
+      },
+      "external_metrics": {
+        "tps": 9170.844517821995,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 2400,
+        "binlog_group_commit_sync_no_delay_count": 1000,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 200,
+        "host_cache_size": 76826214,
+        "innodb_autoextend_increment": 115200006,
+        "innodb_buffer_pool_size": 175000000000,
+        "innodb_max_dirty_pages_pct": 75.8,
+        "innodb_spin_wait_delay": 237,
+        "innodb_thread_concurrency": 30,
+        "table_definition_cache": 53811
+      },
+      "external_metrics": {
+        "tps": 9083.956282039246,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 0,
+        "binlog_group_commit_sync_no_delay_count": 0,
+        "div_precision_increment": 4,
+        "eq_range_index_dive_limit": 200,
+        "host_cache_size": 279,
+        "innodb_autoextend_increment": 64,
+        "innodb_buffer_pool_size": 134217728,
+        "innodb_max_dirty_pages_pct": 90.0,
+        "innodb_spin_wait_delay": 6,
+        "innodb_thread_concurrency": 0,
+        "table_definition_cache": 2000
+      },
+      "external_metrics": {
+        "tps": 9051.899173863336,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 900,
+        "binlog_group_commit_sync_no_delay_count": 900,
+        "div_precision_increment": 5,
+        "eq_range_index_dive_limit": 16,
+        "host_cache_size": 179219660,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 176250000000,
+        "innodb_max_dirty_pages_pct": 81.0,
+        "innodb_spin_wait_delay": 342,
+        "innodb_thread_concurrency": 21,
+        "table_definition_cache": 489
+      },
+      "external_metrics": {
+        "tps": 9042.66632093539,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 900,
+        "binlog_group_commit_sync_no_delay_count": 500,
+        "div_precision_increment": 3,
+        "eq_range_index_dive_limit": 47,
+        "host_cache_size": 204813107,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 157513421772,
+        "innodb_max_dirty_pages_pct": 78.7,
+        "innodb_spin_wait_delay": 80,
+        "innodb_thread_concurrency": 24,
+        "table_definition_cache": 961
+      },
+      "external_metrics": {
+        "tps": 9028.136199440538,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1500,
+        "binlog_group_commit_sync_no_delay_count": 450,
+        "div_precision_increment": 5,
+        "eq_range_index_dive_limit": 74,
+        "host_cache_size": 204813107,
+        "innodb_autoextend_increment": 256000000,
+        "innodb_buffer_pool_size": 140000000000,
+        "innodb_max_dirty_pages_pct": 81.0,
+        "innodb_spin_wait_delay": 80,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 27673
+      },
+      "external_metrics": {
+        "tps": 8998.725947629011,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 400,
+        "binlog_group_commit_sync_no_delay_count": 650,
+        "div_precision_increment": 10,
+        "eq_range_index_dive_limit": 30,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 176250000000,
+        "innodb_max_dirty_pages_pct": 90.9,
+        "innodb_spin_wait_delay": 45,
+        "innodb_thread_concurrency": 37,
+        "table_definition_cache": 512
+      },
+      "external_metrics": {
+        "tps": 8996.179554638047,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1500,
+        "binlog_group_commit_sync_no_delay_count": 800,
+        "div_precision_increment": 2,
+        "eq_range_index_dive_limit": 30,
+        "host_cache_size": 460806553,
+        "innodb_autoextend_increment": 51200200,
+        "innodb_buffer_pool_size": 155000000000,
+        "innodb_max_dirty_pages_pct": 72.9,
+        "innodb_spin_wait_delay": 6,
+        "innodb_thread_concurrency": 21,
+        "table_definition_cache": 52889
+      },
+      "external_metrics": {
+        "tps": 8992.162593966357,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 300,
+        "binlog_group_commit_sync_no_delay_count": 550,
+        "div_precision_increment": 8,
+        "eq_range_index_dive_limit": 18,
+        "host_cache_size": 128000000,
+        "innodb_autoextend_increment": 115200100,
+        "innodb_buffer_pool_size": 112513421772,
+        "innodb_max_dirty_pages_pct": 90.45,
+        "innodb_spin_wait_delay": 45,
+        "innodb_thread_concurrency": 36,
+        "table_definition_cache": 961
+      },
+      "external_metrics": {
+        "tps": 8983.55218877396,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 400,
+        "binlog_group_commit_sync_no_delay_count": 300,
+        "div_precision_increment": 1,
+        "eq_range_index_dive_limit": 16,
+        "host_cache_size": 128000000,
+        "innodb_autoextend_increment": 89600300,
+        "innodb_buffer_pool_size": 157513421772,
+        "innodb_max_dirty_pages_pct": 83.8,
+        "innodb_spin_wait_delay": 284,
+        "innodb_thread_concurrency": 35,
+        "table_definition_cache": 105676
+      },
+      "external_metrics": {
+        "tps": 8982.975848118991,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1200,
+        "binlog_group_commit_sync_no_delay_count": 550,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 18,
+        "host_cache_size": 279,
+        "innodb_autoextend_increment": 44800300,
+        "innodb_buffer_pool_size": 150000000000,
+        "innodb_max_dirty_pages_pct": 90.9,
+        "innodb_spin_wait_delay": 284,
+        "innodb_thread_concurrency": 37,
+        "table_definition_cache": 489
+      },
+      "external_metrics": {
+        "tps": 8953.038996565856,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1500,
+        "binlog_group_commit_sync_no_delay_count": 200,
+        "div_precision_increment": 1,
+        "eq_range_index_dive_limit": 7,
+        "host_cache_size": 230400027,
+        "innodb_autoextend_increment": 57600006,
+        "innodb_buffer_pool_size": 147500000000,
+        "innodb_max_dirty_pages_pct": 64.0,
+        "innodb_spin_wait_delay": 80,
+        "innodb_thread_concurrency": 41,
+        "table_definition_cache": 500
+      },
+      "external_metrics": {
+        "tps": 8921.421103849283,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 2350,
+        "binlog_group_commit_sync_no_delay_count": 100,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 179219660,
+        "innodb_autoextend_increment": 57600100,
+        "innodb_buffer_pool_size": 157513421772,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 244,
+        "innodb_thread_concurrency": 41,
+        "table_definition_cache": 105676
+      },
+      "external_metrics": {
+        "tps": 8826.440575568075,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 900,
+        "binlog_group_commit_sync_no_delay_count": 650,
+        "div_precision_increment": 1,
+        "eq_range_index_dive_limit": 7,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 176250000000,
+        "innodb_max_dirty_pages_pct": 81.0,
+        "innodb_spin_wait_delay": 284,
+        "innodb_thread_concurrency": 40,
+        "table_definition_cache": 53350
+      },
+      "external_metrics": {
+        "tps": 8812.209713098851,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1900,
+        "binlog_group_commit_sync_no_delay_count": 450,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 74,
+        "host_cache_size": 256000000,
+        "innodb_autoextend_increment": 57600006,
+        "innodb_buffer_pool_size": 125000000000,
+        "innodb_max_dirty_pages_pct": 80.0,
+        "innodb_spin_wait_delay": 135,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 52889
+      },
+      "external_metrics": {
+        "tps": 8471.924670366761,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 3700,
+        "binlog_group_commit_sync_no_delay_count": 900,
+        "div_precision_increment": 5,
+        "eq_range_index_dive_limit": 7,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 176250000000,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 342,
+        "innodb_thread_concurrency": 30,
+        "table_definition_cache": 500
+      },
+      "external_metrics": {
+        "tps": 8443.482729624318,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 913,
+        "binlog_group_commit_sync_no_delay_count": 650,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 56,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 13796095,
+        "innodb_buffer_pool_size": 128780713299,
+        "innodb_max_dirty_pages_pct": 92.97582974190654,
+        "innodb_spin_wait_delay": 171,
+        "innodb_thread_concurrency": 43,
+        "table_definition_cache": 92726
+      },
+      "external_metrics": {
+        "tps": 8923.30778633948,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1032,
+        "binlog_group_commit_sync_no_delay_count": 474,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 51,
+        "host_cache_size": 404855907,
+        "innodb_autoextend_increment": 34959062,
+        "innodb_buffer_pool_size": 128608151876,
+        "innodb_max_dirty_pages_pct": 94.09071271354833,
+        "innodb_spin_wait_delay": 240,
+        "innodb_thread_concurrency": 41,
+        "table_definition_cache": 96819
+      },
+      "external_metrics": {
+        "tps": 9061.16187436917,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 745,
+        "binlog_group_commit_sync_no_delay_count": 441,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 53,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 126308761282,
+        "innodb_max_dirty_pages_pct": 82.6286978611812,
+        "innodb_spin_wait_delay": 169,
+        "innodb_thread_concurrency": 21,
+        "table_definition_cache": 141032
+      },
+      "external_metrics": {
+        "tps": 9194.092586496678,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 3150,
+        "binlog_group_commit_sync_no_delay_count": 573,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 103,
+        "host_cache_size": 258444470,
+        "innodb_autoextend_increment": 37598740,
+        "innodb_buffer_pool_size": 101832147521,
+        "innodb_max_dirty_pages_pct": 92.05315122700462,
+        "innodb_spin_wait_delay": 284,
+        "innodb_thread_concurrency": 45,
+        "table_definition_cache": 168736
+      },
+      "external_metrics": {
+        "tps": 9028.276799569412,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 7696,
+        "binlog_group_commit_sync_no_delay_count": 984,
+        "div_precision_increment": 5,
+        "eq_range_index_dive_limit": 52,
+        "host_cache_size": 316860048,
+        "innodb_autoextend_increment": 247754029,
+        "innodb_buffer_pool_size": 125341011582,
+        "innodb_max_dirty_pages_pct": 25.78661764433922,
+        "innodb_spin_wait_delay": 492,
+        "innodb_thread_concurrency": 36,
+        "table_definition_cache": 482801
+      },
+      "external_metrics": {
+        "tps": 8216.744410148778,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 965,
+        "binlog_group_commit_sync_no_delay_count": 600,
+        "div_precision_increment": 4,
+        "eq_range_index_dive_limit": 96,
+        "host_cache_size": 502930765,
+        "innodb_autoextend_increment": 69404916,
+        "innodb_buffer_pool_size": 128090527411,
+        "innodb_max_dirty_pages_pct": 98.63296695441093,
+        "innodb_spin_wait_delay": 142,
+        "innodb_thread_concurrency": 41,
+        "table_definition_cache": 117336
+      },
+      "external_metrics": {
+        "tps": 9627.432695836833,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 423,
+        "binlog_group_commit_sync_no_delay_count": 477,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 49,
+        "host_cache_size": 143715496,
+        "innodb_autoextend_increment": 38695981,
+        "innodb_buffer_pool_size": 120141529474,
+        "innodb_max_dirty_pages_pct": 83.8,
+        "innodb_spin_wait_delay": 209,
+        "innodb_thread_concurrency": 24,
+        "table_definition_cache": 105676
+      },
+      "external_metrics": {
+        "tps": 9613.69980804646,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 4027,
+        "binlog_group_commit_sync_no_delay_count": 437,
+        "div_precision_increment": 4,
+        "eq_range_index_dive_limit": 73,
+        "host_cache_size": 271038791,
+        "innodb_autoextend_increment": 214513400,
+        "innodb_buffer_pool_size": 127980003065,
+        "innodb_max_dirty_pages_pct": 57.96920039949613,
+        "innodb_spin_wait_delay": 317,
+        "innodb_thread_concurrency": 14,
+        "table_definition_cache": 96141
+      },
+      "external_metrics": {
+        "tps": 9054.781178295412,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 450,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 403988085,
+        "innodb_autoextend_increment": 20614461,
+        "innodb_buffer_pool_size": 134098749135,
+        "innodb_max_dirty_pages_pct": 85.94653716023662,
+        "innodb_spin_wait_delay": 237,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 121492
+      },
+      "external_metrics": {
+        "tps": 9238.598564167807,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 786,
+        "binlog_group_commit_sync_no_delay_count": 603,
+        "div_precision_increment": 11,
+        "eq_range_index_dive_limit": 44,
+        "host_cache_size": 463524832,
+        "innodb_autoextend_increment": 62146968,
+        "innodb_buffer_pool_size": 143183979703,
+        "innodb_max_dirty_pages_pct": 91.27839944959639,
+        "innodb_spin_wait_delay": 237,
+        "innodb_thread_concurrency": 34,
+        "table_definition_cache": 72910
+      },
+      "external_metrics": {
+        "tps": 9656.158721579272,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 970,
+        "binlog_group_commit_sync_no_delay_count": 400,
+        "div_precision_increment": 10,
+        "eq_range_index_dive_limit": 7,
+        "host_cache_size": 265664746,
+        "innodb_autoextend_increment": 63535995,
+        "innodb_buffer_pool_size": 117770311007,
+        "innodb_max_dirty_pages_pct": 80.0,
+        "innodb_spin_wait_delay": 85,
+        "innodb_thread_concurrency": 35,
+        "table_definition_cache": 47588
+      },
+      "external_metrics": {
+        "tps": 9306.45390333046,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 954,
+        "binlog_group_commit_sync_no_delay_count": 439,
+        "div_precision_increment": 0,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 477746085,
+        "innodb_autoextend_increment": 67846438,
+        "innodb_buffer_pool_size": 143338848458,
+        "innodb_max_dirty_pages_pct": 86.78267062240594,
+        "innodb_spin_wait_delay": 169,
+        "innodb_thread_concurrency": 30,
+        "table_definition_cache": 141032
+      },
+      "external_metrics": {
+        "tps": 8922.787406526568,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 972,
+        "binlog_group_commit_sync_no_delay_count": 451,
+        "div_precision_increment": 1,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 351665321,
+        "innodb_autoextend_increment": 63079820,
+        "innodb_buffer_pool_size": 117150518206,
+        "innodb_max_dirty_pages_pct": 83.8,
+        "innodb_spin_wait_delay": 66,
+        "innodb_thread_concurrency": 27,
+        "table_definition_cache": 105676
+      },
+      "external_metrics": {
+        "tps": 9001.785984069193,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 670,
+        "binlog_group_commit_sync_no_delay_count": 640,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 381597312,
+        "innodb_autoextend_increment": 13796095,
+        "innodb_buffer_pool_size": 128780713299,
+        "innodb_max_dirty_pages_pct": 95.54368026272675,
+        "innodb_spin_wait_delay": 238,
+        "innodb_thread_concurrency": 50,
+        "table_definition_cache": 110755
+      },
+      "external_metrics": {
+        "tps": 9166.757924940752,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 3916,
+        "binlog_group_commit_sync_no_delay_count": 559,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 128,
+        "host_cache_size": 311152324,
+        "innodb_autoextend_increment": 26944478,
+        "innodb_buffer_pool_size": 143061236791,
+        "innodb_max_dirty_pages_pct": 47.77830120449035,
+        "innodb_spin_wait_delay": 322,
+        "innodb_thread_concurrency": 11,
+        "table_definition_cache": 170358
+      },
+      "external_metrics": {
+        "tps": 8788.248453268272,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 8733,
+        "binlog_group_commit_sync_no_delay_count": 873,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 193,
+        "host_cache_size": 336930793,
+        "innodb_autoextend_increment": 211563680,
+        "innodb_buffer_pool_size": 1422309749,
+        "innodb_max_dirty_pages_pct": 10.052502760338783,
+        "innodb_spin_wait_delay": 704,
+        "innodb_thread_concurrency": 3,
+        "table_definition_cache": 20253
+      },
+      "external_metrics": {
+        "tps": 7767.812109161839,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 4572,
+        "binlog_group_commit_sync_no_delay_count": 641,
+        "div_precision_increment": 17,
+        "eq_range_index_dive_limit": 65,
+        "host_cache_size": 6525869,
+        "innodb_autoextend_increment": 47390444,
+        "innodb_buffer_pool_size": 119394372817,
+        "innodb_max_dirty_pages_pct": 93.42947462603237,
+        "innodb_spin_wait_delay": 950,
+        "innodb_thread_concurrency": 30,
+        "table_definition_cache": 46625
+      },
+      "external_metrics": {
+        "tps": 8156.856228745593,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1008,
+        "binlog_group_commit_sync_no_delay_count": 979,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 5,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 56322736,
+        "innodb_buffer_pool_size": 158319339599,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 220,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 108457
+      },
+      "external_metrics": {
+        "tps": 8846.454656277501,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 428,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 52,
+        "host_cache_size": 431409324,
+        "innodb_autoextend_increment": 5188072,
+        "innodb_buffer_pool_size": 134098749135,
+        "innodb_max_dirty_pages_pct": 85.94653716023662,
+        "innodb_spin_wait_delay": 221,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 110674
+      },
+      "external_metrics": {
+        "tps": 8714.431173606808,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 416,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 34,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 15526931,
+        "innodb_buffer_pool_size": 125305027345,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 237,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 110302
+      },
+      "external_metrics": {
+        "tps": 8594.590093302486,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 999,
+        "binlog_group_commit_sync_no_delay_count": 661,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 44,
+        "host_cache_size": 463524832,
+        "innodb_autoextend_increment": 75078837,
+        "innodb_buffer_pool_size": 144185674153,
+        "innodb_max_dirty_pages_pct": 95.52919842457011,
+        "innodb_spin_wait_delay": 237,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 105493
+      },
+      "external_metrics": {
+        "tps": 9062.927164954055,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1007,
+        "binlog_group_commit_sync_no_delay_count": 473,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 28,
+        "host_cache_size": 414953849,
+        "innodb_autoextend_increment": 15331547,
+        "innodb_buffer_pool_size": 102011122141,
+        "innodb_max_dirty_pages_pct": 85.30854259612425,
+        "innodb_spin_wait_delay": 226,
+        "innodb_thread_concurrency": 21,
+        "table_definition_cache": 109615
+      },
+      "external_metrics": {
+        "tps": 9997.759346307274,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 993,
+        "binlog_group_commit_sync_no_delay_count": 668,
+        "div_precision_increment": 11,
+        "eq_range_index_dive_limit": 96,
+        "host_cache_size": 470491965,
+        "innodb_autoextend_increment": 57691067,
+        "innodb_buffer_pool_size": 142195048128,
+        "innodb_max_dirty_pages_pct": 77.10127581146288,
+        "innodb_spin_wait_delay": 233,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 111165
+      },
+      "external_metrics": {
+        "tps": 9834.432139433271,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1009,
+        "binlog_group_commit_sync_no_delay_count": 613,
+        "div_precision_increment": 10,
+        "eq_range_index_dive_limit": 35,
+        "host_cache_size": 480512404,
+        "innodb_autoextend_increment": 37271104,
+        "innodb_buffer_pool_size": 118616513187,
+        "innodb_max_dirty_pages_pct": 74.39346369452012,
+        "innodb_spin_wait_delay": 222,
+        "innodb_thread_concurrency": 51,
+        "table_definition_cache": 110755
+      },
+      "external_metrics": {
+        "tps": 8786.270985693842,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 4989,
+        "binlog_group_commit_sync_no_delay_count": 816,
+        "div_precision_increment": 8,
+        "eq_range_index_dive_limit": 38,
+        "host_cache_size": 192430957,
+        "innodb_autoextend_increment": 85495740,
+        "innodb_buffer_pool_size": 13177920303,
+        "innodb_max_dirty_pages_pct": 58.06359727438697,
+        "innodb_spin_wait_delay": 253,
+        "innodb_thread_concurrency": 31,
+        "table_definition_cache": 299403
+      },
+      "external_metrics": {
+        "tps": 8810.873455903646,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 510,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 37718877,
+        "innodb_buffer_pool_size": 140000000000,
+        "innodb_max_dirty_pages_pct": 81.58725169344429,
+        "innodb_spin_wait_delay": 171,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 109174
+      },
+      "external_metrics": {
+        "tps": 9481.794197458012,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 4190,
+        "binlog_group_commit_sync_no_delay_count": 978,
+        "div_precision_increment": 4,
+        "eq_range_index_dive_limit": 171,
+        "host_cache_size": 463483248,
+        "innodb_autoextend_increment": 40169463,
+        "innodb_buffer_pool_size": 118240239961,
+        "innodb_max_dirty_pages_pct": 79.46953252997348,
+        "innodb_spin_wait_delay": 730,
+        "innodb_thread_concurrency": 31,
+        "table_definition_cache": 488869
+      },
+      "external_metrics": {
+        "tps": 9813.779800863294,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 478,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 431409324,
+        "innodb_autoextend_increment": 37543622,
+        "innodb_buffer_pool_size": 126806825527,
+        "innodb_max_dirty_pages_pct": 84.16600179141327,
+        "innodb_spin_wait_delay": 230,
+        "innodb_thread_concurrency": 33,
+        "table_definition_cache": 132146
+      },
+      "external_metrics": {
+        "tps": 9803.094950262406,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1002,
+        "binlog_group_commit_sync_no_delay_count": 534,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 412880789,
+        "innodb_autoextend_increment": 34957163,
+        "innodb_buffer_pool_size": 140934935163,
+        "innodb_max_dirty_pages_pct": 79.91279262016126,
+        "innodb_spin_wait_delay": 222,
+        "innodb_thread_concurrency": 34,
+        "table_definition_cache": 122139
+      },
+      "external_metrics": {
+        "tps": 9043.758009830772,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1114,
+        "binlog_group_commit_sync_no_delay_count": 479,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 42,
+        "host_cache_size": 445897336,
+        "innodb_autoextend_increment": 25999858,
+        "innodb_buffer_pool_size": 127108287795,
+        "innodb_max_dirty_pages_pct": 63.50278319772517,
+        "innodb_spin_wait_delay": 186,
+        "innodb_thread_concurrency": 40,
+        "table_definition_cache": 111691
+      },
+      "external_metrics": {
+        "tps": 9327.358755822794,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1007,
+        "binlog_group_commit_sync_no_delay_count": 473,
+        "div_precision_increment": 9,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 420602711,
+        "innodb_autoextend_increment": 25479725,
+        "innodb_buffer_pool_size": 99696374800,
+        "innodb_max_dirty_pages_pct": 76.36526219420685,
+        "innodb_spin_wait_delay": 247,
+        "innodb_thread_concurrency": 13,
+        "table_definition_cache": 178045
+      },
+      "external_metrics": {
+        "tps": 9507.707982484657,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 971,
+        "binlog_group_commit_sync_no_delay_count": 495,
+        "div_precision_increment": 2,
+        "eq_range_index_dive_limit": 120,
+        "host_cache_size": 495050073,
+        "innodb_autoextend_increment": 31463046,
+        "innodb_buffer_pool_size": 102566420778,
+        "innodb_max_dirty_pages_pct": 98.63296695441093,
+        "innodb_spin_wait_delay": 415,
+        "innodb_thread_concurrency": 45,
+        "table_definition_cache": 107086
+      },
+      "external_metrics": {
+        "tps": 9883.14209002723,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 450,
+        "div_precision_increment": 10,
+        "eq_range_index_dive_limit": 54,
+        "host_cache_size": 409613107,
+        "innodb_autoextend_increment": 37613015,
+        "innodb_buffer_pool_size": 139195978753,
+        "innodb_max_dirty_pages_pct": 85.5,
+        "innodb_spin_wait_delay": 237,
+        "innodb_thread_concurrency": 32,
+        "table_definition_cache": 98405
+      },
+      "external_metrics": {
+        "tps": 9485.515709578132,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1007,
+        "binlog_group_commit_sync_no_delay_count": 447,
+        "div_precision_increment": 4,
+        "eq_range_index_dive_limit": 21,
+        "host_cache_size": 414953849,
+        "innodb_autoextend_increment": 33783631,
+        "innodb_buffer_pool_size": 100569188136,
+        "innodb_max_dirty_pages_pct": 86.6791091372153,
+        "innodb_spin_wait_delay": 226,
+        "innodb_thread_concurrency": 27,
+        "table_definition_cache": 67562
+      },
+      "external_metrics": {
+        "tps": 9082.207152751935,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 2161,
+        "binlog_group_commit_sync_no_delay_count": 35,
+        "div_precision_increment": 19,
+        "eq_range_index_dive_limit": 121,
+        "host_cache_size": 60638435,
+        "innodb_autoextend_increment": 84177571,
+        "innodb_buffer_pool_size": 150590319621,
+        "innodb_max_dirty_pages_pct": 73.10047896416462,
+        "innodb_spin_wait_delay": 716,
+        "innodb_thread_concurrency": 33,
+        "table_definition_cache": 464659
+      },
+      "external_metrics": {
+        "tps": 8753.462967307325,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 2077,
+        "binlog_group_commit_sync_no_delay_count": 693,
+        "div_precision_increment": 0,
+        "eq_range_index_dive_limit": 136,
+        "host_cache_size": 415587127,
+        "innodb_autoextend_increment": 67116654,
+        "innodb_buffer_pool_size": 97393290409,
+        "innodb_max_dirty_pages_pct": 85.49879157550642,
+        "innodb_spin_wait_delay": 365,
+        "innodb_thread_concurrency": 39,
+        "table_definition_cache": 88779
+      },
+      "external_metrics": {
+        "tps": 9954.920085823429,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1518,
+        "binlog_group_commit_sync_no_delay_count": 492,
+        "div_precision_increment": 0,
+        "eq_range_index_dive_limit": 63,
+        "host_cache_size": 415751897,
+        "innodb_autoextend_increment": 65967778,
+        "innodb_buffer_pool_size": 87593793339,
+        "innodb_max_dirty_pages_pct": 82.60923986476072,
+        "innodb_spin_wait_delay": 331,
+        "innodb_thread_concurrency": 13,
+        "table_definition_cache": 101786
+      },
+      "external_metrics": {
+        "tps": 9594.444285548983,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 2486,
+        "binlog_group_commit_sync_no_delay_count": 960,
+        "div_precision_increment": 3,
+        "eq_range_index_dive_limit": 103,
+        "host_cache_size": 427623664,
+        "innodb_autoextend_increment": 57691067,
+        "innodb_buffer_pool_size": 96062503717,
+        "innodb_max_dirty_pages_pct": 82.8047429150616,
+        "innodb_spin_wait_delay": 233,
+        "innodb_thread_concurrency": 40,
+        "table_definition_cache": 100678
+      },
+      "external_metrics": {
+        "tps": 8481.981588731087,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 450,
+        "div_precision_increment": 0,
+        "eq_range_index_dive_limit": 27,
+        "host_cache_size": 415333216,
+        "innodb_autoextend_increment": 3937473,
+        "innodb_buffer_pool_size": 143492623058,
+        "innodb_max_dirty_pages_pct": 91.44781824095166,
+        "innodb_spin_wait_delay": 288,
+        "innodb_thread_concurrency": 26,
+        "table_definition_cache": 80342
+      },
+      "external_metrics": {
+        "tps": 9269.798339161132,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 450,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 58,
+        "host_cache_size": 500408389,
+        "innodb_autoextend_increment": 39938431,
+        "innodb_buffer_pool_size": 126806825527,
+        "innodb_max_dirty_pages_pct": 68.16295814234165,
+        "innodb_spin_wait_delay": 306,
+        "innodb_thread_concurrency": 31,
+        "table_definition_cache": 101367
+      },
+      "external_metrics": {
+        "tps": 10000.16149724985,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 477,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 64,
+        "host_cache_size": 414953849,
+        "innodb_autoextend_increment": 43036886,
+        "innodb_buffer_pool_size": 102011122141,
+        "innodb_max_dirty_pages_pct": 85.40551071065137,
+        "innodb_spin_wait_delay": 351,
+        "innodb_thread_concurrency": 40,
+        "table_definition_cache": 108652
+      },
+      "external_metrics": {
+        "tps": 9778.530935311597,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 3186,
+        "binlog_group_commit_sync_no_delay_count": 456,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 91,
+        "host_cache_size": 497496786,
+        "innodb_autoextend_increment": 51292606,
+        "innodb_buffer_pool_size": 139849053221,
+        "innodb_max_dirty_pages_pct": 64.80243777971661,
+        "innodb_spin_wait_delay": 420,
+        "innodb_thread_concurrency": 31,
+        "table_definition_cache": 98849
+      },
+      "external_metrics": {
+        "tps": 8844.366120674465,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 2134,
+        "binlog_group_commit_sync_no_delay_count": 483,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 101,
+        "host_cache_size": 499948478,
+        "innodb_autoextend_increment": 40763961,
+        "innodb_buffer_pool_size": 139195978753,
+        "innodb_max_dirty_pages_pct": 81.06795177388102,
+        "innodb_spin_wait_delay": 503,
+        "innodb_thread_concurrency": 31,
+        "table_definition_cache": 91167
+      },
+      "external_metrics": {
+        "tps": 8775.688029815265,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 5476,
+        "binlog_group_commit_sync_no_delay_count": 571,
+        "div_precision_increment": 26,
+        "eq_range_index_dive_limit": 172,
+        "host_cache_size": 77852332,
+        "innodb_autoextend_increment": 213485948,
+        "innodb_buffer_pool_size": 109808263164,
+        "innodb_max_dirty_pages_pct": 29.604875141608506,
+        "innodb_spin_wait_delay": 805,
+        "innodb_thread_concurrency": 43,
+        "table_definition_cache": 334600
+      },
+      "external_metrics": {
+        "tps": 9420.209515314613,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1991,
+        "binlog_group_commit_sync_no_delay_count": 477,
+        "div_precision_increment": 0,
+        "eq_range_index_dive_limit": 99,
+        "host_cache_size": 503188213,
+        "innodb_autoextend_increment": 50965218,
+        "innodb_buffer_pool_size": 105690142777,
+        "innodb_max_dirty_pages_pct": 97.12447279491437,
+        "innodb_spin_wait_delay": 463,
+        "innodb_thread_concurrency": 49,
+        "table_definition_cache": 95168
+      },
+      "external_metrics": {
+        "tps": 9819.016548020216,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 3018,
+        "binlog_group_commit_sync_no_delay_count": 458,
+        "div_precision_increment": 0,
+        "eq_range_index_dive_limit": 96,
+        "host_cache_size": 495574616,
+        "innodb_autoextend_increment": 39144510,
+        "innodb_buffer_pool_size": 113251941694,
+        "innodb_max_dirty_pages_pct": 96.52520883899967,
+        "innodb_spin_wait_delay": 466,
+        "innodb_thread_concurrency": 44,
+        "table_definition_cache": 79224
+      },
+      "external_metrics": {
+        "tps": 8275.639570625231,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 988,
+        "binlog_group_commit_sync_no_delay_count": 484,
+        "div_precision_increment": 0,
+        "eq_range_index_dive_limit": 9,
+        "host_cache_size": 414953849,
+        "innodb_autoextend_increment": 44602554,
+        "innodb_buffer_pool_size": 111513736427,
+        "innodb_max_dirty_pages_pct": 72.7074846066388,
+        "innodb_spin_wait_delay": 325,
+        "innodb_thread_concurrency": 38,
+        "table_definition_cache": 108345
+      },
+      "external_metrics": {
+        "tps": 8534.462777085257,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 9839,
+        "binlog_group_commit_sync_no_delay_count": 746,
+        "div_precision_increment": 5,
+        "eq_range_index_dive_limit": 164,
+        "host_cache_size": 120178319,
+        "innodb_autoextend_increment": 164800898,
+        "innodb_buffer_pool_size": 80181344382,
+        "innodb_max_dirty_pages_pct": 82.04651023425433,
+        "innodb_spin_wait_delay": 30,
+        "innodb_thread_concurrency": 46,
+        "table_definition_cache": 363147
+      },
+      "external_metrics": {
+        "tps": 7916.69937115018,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1007,
+        "binlog_group_commit_sync_no_delay_count": 388,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 28,
+        "host_cache_size": 507703720,
+        "innodb_autoextend_increment": 3549208,
+        "innodb_buffer_pool_size": 102011122141,
+        "innodb_max_dirty_pages_pct": 85.3033438999997,
+        "innodb_spin_wait_delay": 362,
+        "innodb_thread_concurrency": 31,
+        "table_definition_cache": 109550
+      },
+      "external_metrics": {
+        "tps": 9921.009969654237,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 364,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 500408389,
+        "innodb_autoextend_increment": 36515416,
+        "innodb_buffer_pool_size": 140080232069,
+        "innodb_max_dirty_pages_pct": 58.151540509100414,
+        "innodb_spin_wait_delay": 316,
+        "innodb_thread_concurrency": 29,
+        "table_definition_cache": 99945
+      },
+      "external_metrics": {
+        "tps": 9622.366160049087,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 445,
+        "binlog_group_commit_sync_no_delay_count": 449,
+        "div_precision_increment": 9,
+        "eq_range_index_dive_limit": 18,
+        "host_cache_size": 510719279,
+        "innodb_autoextend_increment": 16215883,
+        "innodb_buffer_pool_size": 102220446535,
+        "innodb_max_dirty_pages_pct": 53.31081176498899,
+        "innodb_spin_wait_delay": 247,
+        "innodb_thread_concurrency": 20,
+        "table_definition_cache": 132494
+      },
+      "external_metrics": {
+        "tps": 9087.974336844605,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1234,
+        "binlog_group_commit_sync_no_delay_count": 576,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 148,
+        "host_cache_size": 503443039,
+        "innodb_autoextend_increment": 13592489,
+        "innodb_buffer_pool_size": 102111646807,
+        "innodb_max_dirty_pages_pct": 82.27933784219739,
+        "innodb_spin_wait_delay": 395,
+        "innodb_thread_concurrency": 42,
+        "table_definition_cache": 110797
+      },
+      "external_metrics": {
+        "tps": 9131.965344358085,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 329,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 432532903,
+        "innodb_autoextend_increment": 36861847,
+        "innodb_buffer_pool_size": 140000000000,
+        "innodb_max_dirty_pages_pct": 85.0001554618339,
+        "innodb_spin_wait_delay": 262,
+        "innodb_thread_concurrency": 27,
+        "table_definition_cache": 102899
+      },
+      "external_metrics": {
+        "tps": 10000.379782198474,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 5347,
+        "binlog_group_commit_sync_no_delay_count": 788,
+        "div_precision_increment": 27,
+        "eq_range_index_dive_limit": 2,
+        "host_cache_size": 69820447,
+        "innodb_autoextend_increment": 102704852,
+        "innodb_buffer_pool_size": 179212816823,
+        "innodb_max_dirty_pages_pct": 86.3220442870631,
+        "innodb_spin_wait_delay": 693,
+        "innodb_thread_concurrency": 3,
+        "table_definition_cache": 355663
+      },
+      "external_metrics": {
+        "tps": 9927.18961996508,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 423,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 91,
+        "host_cache_size": 429309814,
+        "innodb_autoextend_increment": 36791848,
+        "innodb_buffer_pool_size": 140000000000,
+        "innodb_max_dirty_pages_pct": 84.84829735680822,
+        "innodb_spin_wait_delay": 243,
+        "innodb_thread_concurrency": 30,
+        "table_definition_cache": 109174
+      },
+      "external_metrics": {
+        "tps": 9139.161041360727,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 8959,
+        "binlog_group_commit_sync_no_delay_count": 253,
+        "div_precision_increment": 10,
+        "eq_range_index_dive_limit": 59,
+        "host_cache_size": 321949325,
+        "innodb_autoextend_increment": 72839792,
+        "innodb_buffer_pool_size": 96460133217,
+        "innodb_max_dirty_pages_pct": 51.47310770325721,
+        "innodb_spin_wait_delay": 507,
+        "innodb_thread_concurrency": 44,
+        "table_definition_cache": 212680
+      },
+      "external_metrics": {
+        "tps": 8284.075337129614,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 295,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 60,
+        "host_cache_size": 432532903,
+        "innodb_autoextend_increment": 42275355,
+        "innodb_buffer_pool_size": 137007550466,
+        "innodb_max_dirty_pages_pct": 97.36618525188081,
+        "innodb_spin_wait_delay": 291,
+        "innodb_thread_concurrency": 37,
+        "table_definition_cache": 145919
+      },
+      "external_metrics": {
+        "tps": 9173.430799631746,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 332,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 58,
+        "host_cache_size": 444920469,
+        "innodb_autoextend_increment": 51726934,
+        "innodb_buffer_pool_size": 137645302159,
+        "innodb_max_dirty_pages_pct": 83.30705408532626,
+        "innodb_spin_wait_delay": 306,
+        "innodb_thread_concurrency": 33,
+        "table_definition_cache": 28938
+      },
+      "external_metrics": {
+        "tps": 10000.366728557745,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 333,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 61,
+        "host_cache_size": 424810826,
+        "innodb_autoextend_increment": 62228519,
+        "innodb_buffer_pool_size": 120132228191,
+        "innodb_max_dirty_pages_pct": 83.3454626236179,
+        "innodb_spin_wait_delay": 297,
+        "innodb_thread_concurrency": 43,
+        "table_definition_cache": 113585
+      },
+      "external_metrics": {
+        "tps": 9838.24962745828,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1007,
+        "binlog_group_commit_sync_no_delay_count": 449,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 29,
+        "host_cache_size": 414953849,
+        "innodb_autoextend_increment": 18084046,
+        "innodb_buffer_pool_size": 93088123646,
+        "innodb_max_dirty_pages_pct": 85.3425126051754,
+        "innodb_spin_wait_delay": 232,
+        "innodb_thread_concurrency": 25,
+        "table_definition_cache": 108085
+      },
+      "external_metrics": {
+        "tps": 9034.819081056814,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 8861,
+        "binlog_group_commit_sync_no_delay_count": 118,
+        "div_precision_increment": 3,
+        "eq_range_index_dive_limit": 18,
+        "host_cache_size": 204576891,
+        "innodb_autoextend_increment": 90913106,
+        "innodb_buffer_pool_size": 139502448676,
+        "innodb_max_dirty_pages_pct": 68.97743423236517,
+        "innodb_spin_wait_delay": 653,
+        "innodb_thread_concurrency": 39,
+        "table_definition_cache": 174078
+      },
+      "external_metrics": {
+        "tps": 8469.32410064082,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 661,
+        "binlog_group_commit_sync_no_delay_count": 553,
+        "div_precision_increment": 4,
+        "eq_range_index_dive_limit": 163,
+        "host_cache_size": 363749441,
+        "innodb_autoextend_increment": 20069324,
+        "innodb_buffer_pool_size": 180981726110,
+        "innodb_max_dirty_pages_pct": 7.442512071510883,
+        "innodb_spin_wait_delay": 618,
+        "innodb_thread_concurrency": 28,
+        "table_definition_cache": 420905
+      },
+      "external_metrics": {
+        "tps": 9528.863578838425,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1007,
+        "binlog_group_commit_sync_no_delay_count": 458,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 26,
+        "host_cache_size": 414953849,
+        "innodb_autoextend_increment": 3701686,
+        "innodb_buffer_pool_size": 95789654533,
+        "innodb_max_dirty_pages_pct": 85.30854259612425,
+        "innodb_spin_wait_delay": 235,
+        "innodb_thread_concurrency": 23,
+        "table_definition_cache": 109615
+      },
+      "external_metrics": {
+        "tps": 9848.512559508645,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 8193,
+        "binlog_group_commit_sync_no_delay_count": 740,
+        "div_precision_increment": 18,
+        "eq_range_index_dive_limit": 64,
+        "host_cache_size": 260074681,
+        "innodb_autoextend_increment": 126165450,
+        "innodb_buffer_pool_size": 95409155413,
+        "innodb_max_dirty_pages_pct": 14.045522726359298,
+        "innodb_spin_wait_delay": 803,
+        "innodb_thread_concurrency": 50,
+        "table_definition_cache": 397926
+      },
+      "external_metrics": {
+        "tps": 8796.95523326395,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 974,
+        "binlog_group_commit_sync_no_delay_count": 546,
+        "div_precision_increment": 7,
+        "eq_range_index_dive_limit": 87,
+        "host_cache_size": 483659232,
+        "innodb_autoextend_increment": 37978033,
+        "innodb_buffer_pool_size": 145824007388,
+        "innodb_max_dirty_pages_pct": 72.74229128362349,
+        "innodb_spin_wait_delay": 710,
+        "innodb_thread_concurrency": 9,
+        "table_definition_cache": 449949
+      },
+      "external_metrics": {
+        "tps": 9352.596780680311,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 330,
+        "div_precision_increment": 4,
+        "eq_range_index_dive_limit": 35,
+        "host_cache_size": 420482200,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 138495739550,
+        "innodb_max_dirty_pages_pct": 83.54893077952698,
+        "innodb_spin_wait_delay": 267,
+        "innodb_thread_concurrency": 25,
+        "table_definition_cache": 101350
+      },
+      "external_metrics": {
+        "tps": 9293.07167316142,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 325,
+        "div_precision_increment": 2,
+        "eq_range_index_dive_limit": 35,
+        "host_cache_size": 425035057,
+        "innodb_autoextend_increment": 36518271,
+        "innodb_buffer_pool_size": 138842835100,
+        "innodb_max_dirty_pages_pct": 85.07572964806836,
+        "innodb_spin_wait_delay": 264,
+        "innodb_thread_concurrency": 20,
+        "table_definition_cache": 102687
+      },
+      "external_metrics": {
+        "tps": 9907.81245171812,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1718,
+        "binlog_group_commit_sync_no_delay_count": 961,
+        "div_precision_increment": 29,
+        "eq_range_index_dive_limit": 119,
+        "host_cache_size": 293649078,
+        "innodb_autoextend_increment": 184091938,
+        "innodb_buffer_pool_size": 57919575436,
+        "innodb_max_dirty_pages_pct": 1.124782173920703,
+        "innodb_spin_wait_delay": 861,
+        "innodb_thread_concurrency": 26,
+        "table_definition_cache": 459524
+      },
+      "external_metrics": {
+        "tps": 9808.782347060269,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1007,
+        "binlog_group_commit_sync_no_delay_count": 312,
+        "div_precision_increment": 5,
+        "eq_range_index_dive_limit": 35,
+        "host_cache_size": 437680472,
+        "innodb_autoextend_increment": 66983308,
+        "innodb_buffer_pool_size": 137498572865,
+        "innodb_max_dirty_pages_pct": 83.57685754145034,
+        "innodb_spin_wait_delay": 296,
+        "innodb_thread_concurrency": 23,
+        "table_definition_cache": 105470
+      },
+      "external_metrics": {
+        "tps": 8450.13591460928,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 8865,
+        "binlog_group_commit_sync_no_delay_count": 708,
+        "div_precision_increment": 14,
+        "eq_range_index_dive_limit": 115,
+        "host_cache_size": 439353847,
+        "innodb_autoextend_increment": 54073951,
+        "innodb_buffer_pool_size": 74264212647,
+        "innodb_max_dirty_pages_pct": 97.51305922046583,
+        "innodb_spin_wait_delay": 615,
+        "innodb_thread_concurrency": 9,
+        "table_definition_cache": 299894
+      },
+      "external_metrics": {
+        "tps": 7601.655086938778,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1822,
+        "binlog_group_commit_sync_no_delay_count": 265,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 434245326,
+        "innodb_autoextend_increment": 51726934,
+        "innodb_buffer_pool_size": 138076442573,
+        "innodb_max_dirty_pages_pct": 82.96990836444297,
+        "innodb_spin_wait_delay": 306,
+        "innodb_thread_concurrency": 27,
+        "table_definition_cache": 130817
+      },
+      "external_metrics": {
+        "tps": 8206.333083191437,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1007,
+        "binlog_group_commit_sync_no_delay_count": 401,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 47,
+        "host_cache_size": 436352891,
+        "innodb_autoextend_increment": 12598491,
+        "innodb_buffer_pool_size": 138451052845,
+        "innodb_max_dirty_pages_pct": 83.46652711897946,
+        "innodb_spin_wait_delay": 196,
+        "innodb_thread_concurrency": 18,
+        "table_definition_cache": 101630
+      },
+      "external_metrics": {
+        "tps": 9995.18548099357,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 332,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 30,
+        "host_cache_size": 444920469,
+        "innodb_autoextend_increment": 51726934,
+        "innodb_buffer_pool_size": 133870739527,
+        "innodb_max_dirty_pages_pct": 83.30705408532626,
+        "innodb_spin_wait_delay": 298,
+        "innodb_thread_concurrency": 34,
+        "table_definition_cache": 28938
+      },
+      "external_metrics": {
+        "tps": 9949.090922615262,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 333,
+        "div_precision_increment": 0,
+        "eq_range_index_dive_limit": 60,
+        "host_cache_size": 462934378,
+        "innodb_autoextend_increment": 63947254,
+        "innodb_buffer_pool_size": 117584026784,
+        "innodb_max_dirty_pages_pct": 58.151540509100414,
+        "innodb_spin_wait_delay": 273,
+        "innodb_thread_concurrency": 29,
+        "table_definition_cache": 29178
+      },
+      "external_metrics": {
+        "tps": 9845.62708595476,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 337,
+        "div_precision_increment": 0,
+        "eq_range_index_dive_limit": 59,
+        "host_cache_size": 454615009,
+        "innodb_autoextend_increment": 43747548,
+        "innodb_buffer_pool_size": 122172429089,
+        "innodb_max_dirty_pages_pct": 67.72781997697568,
+        "innodb_spin_wait_delay": 306,
+        "innodb_thread_concurrency": 33,
+        "table_definition_cache": 42059
+      },
+      "external_metrics": {
+        "tps": 9165.714447188913,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 3540,
+        "binlog_group_commit_sync_no_delay_count": 58,
+        "div_precision_increment": 17,
+        "eq_range_index_dive_limit": 189,
+        "host_cache_size": 54384134,
+        "innodb_autoextend_increment": 206688494,
+        "innodb_buffer_pool_size": 15556145542,
+        "innodb_max_dirty_pages_pct": 22.273251614276756,
+        "innodb_spin_wait_delay": 691,
+        "innodb_thread_concurrency": 52,
+        "table_definition_cache": 177899
+      },
+      "external_metrics": {
+        "tps": 9023.603123291132,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 260,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 48,
+        "host_cache_size": 446268318,
+        "innodb_autoextend_increment": 38612670,
+        "innodb_buffer_pool_size": 145036160225,
+        "innodb_max_dirty_pages_pct": 87.57104142771763,
+        "innodb_spin_wait_delay": 308,
+        "innodb_thread_concurrency": 54,
+        "table_definition_cache": 102991
+      },
+      "external_metrics": {
+        "tps": 9921.05113393831,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 197,
+        "binlog_group_commit_sync_no_delay_count": 796,
+        "div_precision_increment": 12,
+        "eq_range_index_dive_limit": 27,
+        "host_cache_size": 116088315,
+        "innodb_autoextend_increment": 146685940,
+        "innodb_buffer_pool_size": 184916065018,
+        "innodb_max_dirty_pages_pct": 8.993503465674134,
+        "innodb_spin_wait_delay": 655,
+        "innodb_thread_concurrency": 39,
+        "table_definition_cache": 435109
+      },
+      "external_metrics": {
+        "tps": 9858.827191776934,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 1000,
+        "binlog_group_commit_sync_no_delay_count": 450,
+        "div_precision_increment": 6,
+        "eq_range_index_dive_limit": 45,
+        "host_cache_size": 404277731,
+        "innodb_autoextend_increment": 38400400,
+        "innodb_buffer_pool_size": 140000000000,
+        "innodb_max_dirty_pages_pct": 89.0368846204238,
+        "innodb_spin_wait_delay": 251,
+        "innodb_thread_concurrency": 29,
+        "table_definition_cache": 106916
+      },
+      "external_metrics": {
+        "tps": 9075.934851225888,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    },
+    {
+      "configuration": {
+        "binlog_group_commit_sync_delay": 4106,
+        "binlog_group_commit_sync_no_delay_count": 134,
+        "div_precision_increment": 12,
+        "eq_range_index_dive_limit": 98,
+        "host_cache_size": 151149128,
+        "innodb_autoextend_increment": 112121942,
+        "innodb_buffer_pool_size": 158585049798,
+        "innodb_max_dirty_pages_pct": 53.3682438203595,
+        "innodb_spin_wait_delay": 169,
+        "innodb_thread_concurrency": 33,
+        "table_definition_cache": 208765
+      },
+      "external_metrics": {
+        "tps": 8461.281955977653,
+        "lat": 0,
+        "qps": 0,
+        "tpsVar": 0,
+        "latVar": 0,
+        "qpsVar": 0
+      },
+      "internal_metrics": [],
+      "resource": {
+        "cpu": 0,
+        "readIO": 0,
+        "writeIO": 0,
+        "IO": 0,
+        "virtualMem": 0,
+        "physical": 0,
+        "dirty": 0,
+        "hit": 0,
+        "data": 0
+      },
+      "trial_state": 0,
+      "elapsed_time": 200
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "hyperparameters": [
+    {
+      "knob": "innodb_spin_wait_delay",
+      "suggested_values": [
+        "10",
+        "20",
+        "30"
+      ],
+      "probability": [
+        0.7,
+        0.6,
+        0.5
+      ],
+      "min_value": "0",
+      "max_value": "100"
+    },
+    {
+      "knob": "innodb_thread_concurrency",
+      "suggested_values": [
+        "64",
+        "128",
+        "200"
+      ],
+      "probability": [
+        0.8,
+        0.7,
+        0.6
+      ],
+      "min_value": "8",
+      "max_value": "632"
+    },
+    {
+      "knob": "binlog_group_commit_sync_delay",
+      "suggested_values": [
+        "0",
+        "100",
+        "200"
+      ],
+      "probability": [
+        0.9,
+        0.7,
+        0.5
+      ],
+      "min_value": "0",
+      "max_value": "749092"
+    },
+    {
+      "knob": "innodb_buffer_pool_size",
+      "suggested_values": [
+        "200G",
+        "220G",
+        "250G"
+      ],
+      "probability": [
+        0.95,
+        0.9,
+        0.85
+      ],
+      "min_value": "128G",
+      "max_value": "88G"
+    },
+    {
+      "knob": "eq_range_index_dive_limit",
+      "suggested_values": [
+        "200",
+        "500",
+        "800"
+      ],
+      "probability": [
+        0.7,
+        0.6,
+        0.5
+      ],
+      "min_value": "10",
+      "max_value": "1489139328"
+    },
+    {
+      "knob": "binlog_group_commit_sync_no_delay_count",
+      "suggested_values": [
+        "0",
+        "10",
+        "20"
+      ],
+      "probability": [
+        0.8,
+        0.7,
+        0.6
+      ],
+      "min_value": "0",
+      "max_value": "50"
+    },
+    {
+      "knob": "host_cache_size",
+      "suggested_values": [
+        "1MB",
+        "2MB",
+        "4MB"
+      ],
+      "probability": [
+        0.85,
+        0.75,
+        0.65
+      ],
+      "min_value": "256KB",
+      "max_value": "8MB"
+    },
+    {
+      "knob": "range_alloc_block_size",
+      "suggested_values": [
+        "4096",
+        "8192",
+        "16384"
+      ],
+      "probability": [
+        0.7,
+        0.6,
+        0.5
+      ],
+      "min_value": "1024",
+      "max_value": "32768"
+    },
+    {
+      "knob": "innodb_adaptive_max_sleep_delay",
+      "suggested_values": [
+        "10",
+        "20",
+        "30"
+      ],
+      "probability": [
+        0.8,
+        0.7,
+        0.6
+      ],
+      "min_value": "0",
+      "max_value": "100"
+    },
+    {
+      "knob": "innodb_lru_scan_depth",
+      "suggested_values": [
+        "1000",
+        "2000",
+        "3000"
+      ],
+      "probability": [
+        0.75,
+        0.65,
+        0.55
+      ],
+      "min_value": "100",
+      "max_value": "10000"
+    },
+    {
+      "knob": "div_precision_increment",
+      "suggested_values": [
+        "4",
+        "5",
+        "6"
+      ],
+      "probability": [
+        0.7,
+        0.6,
+        0.5
+      ],
+      "min_value": "0",
+      "max_value": "10"
+    },
+    {
+      "knob": "innodb_ft_total_cache_size",
+      "suggested_values": [
+        "64MB",
+        "128MB",
+        "256MB"
+      ],
+      "probability": [
+        0.8,
+        0.7,
+        0.6
+      ],
+      "min_value": "1MB",
+      "max_value": "512MB"
+    },
+    {
+      "knob": "innodb_concurrency_tickets",
+      "suggested_values": [
+        "500",
+        "1000",
+        "1500"
+      ],
+      "probability": [
+        0.75,
+        0.65,
+        0.55
+      ],
+      "min_value": "100",
+      "max_value": "4000"
+    },
+    {
+      "knob": "innodb_log_write_ahead_size",
+      "suggested_values": [
+        "8192",
+        "16384",
+        "32768"
+      ],
+      "probability": [
+        0.7,
+        0.6,
+        0.5
+      ],
+      "min_value": "4096",
+      "max_value": "65536"
+    },
+    {
+      "knob": "innodb_flush_log_at_timeout",
+      "suggested_values": [
+        "1",
+        "2",
+        "3"
+      ],
+      "probability": [
+        0.75,
+        0.65,
+        0.55
+      ],
+      "min_value": "0",
+      "max_value": "60"
+    },
+    {
+      "knob": "innodb_thread_sleep_delay",
+      "suggested_values": [
+        "1",
+        "5",
+        "10"
+      ],
+      "probability": [
+        0.8,
+        0.7,
+        0.6
+      ],
+      "min_value": "0",
+      "max_value": "100"
+    },
+    {
+      "knob": "innodb_flush_log_at_trx_commit",
+      "suggested_values": [
+        "0",
+        "1",
+        "2"
+      ],
+      "probability": [
+        0.9,
+        0.8,
+        0.7
+      ],
+      "min_value": "0",
+      "max_value": "2"
+    },
+    {
+      "knob": "innodb_io_capacity_max",
+      "suggested_values": [
+        "2000",
+        "4000",
+        "6000"
+      ],
+      "probability": [
+        0.75,
+        0.65,
+        0.55
+      ],
+      "min_value": "1000",
+      "max_value": "10000"
+    }
+  ]
+}
