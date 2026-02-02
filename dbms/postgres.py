@@ -22,7 +22,7 @@ class PgDBMS(DBMSTemplate):
                 self.connection = psycopg2.connect(
                     database = db, user = self.user, 
                     password = self.password, host = "localhost",
-                    port = 6161
+                    port = 5432
                 )
                 logger.info(f"Success to connect to {db} with user {self.user}")
                 return True
@@ -64,6 +64,7 @@ class PgDBMS(DBMSTemplate):
         time.sleep(2)
         success = self._connect()
         if success:
+            logger.info('DBMS restarted successfully.')
             return success
         else:
             try:
@@ -76,6 +77,11 @@ class PgDBMS(DBMSTemplate):
     
     def get_sql_result(self, sql):
         """ Execute sql query on dbms and return the result and its description """
+        if self.connection is None:
+            logger.warning("Connection is None, attempting to reconnect...")
+            success = self._connect()
+            if not success or self.connection is None:
+                raise Exception("Failed to establish database connection")
         self.connection.autocommit = True
         cursor = self.connection.cursor()
         cursor.execute(sql)
@@ -108,6 +114,12 @@ class PgDBMS(DBMSTemplate):
     def update_dbms(self, sql):
         """ Execute sql query on dbms to update knob value and return success flag """
         try:
+            if self.connection is None:
+                logger.warning("Connection is None, attempting to reconnect...")
+                success = self._connect()
+                if not success or self.connection is None:
+                    print(f"Failed to execute {sql} to update dbms for error: 'NoneType' object has no attribute 'autocommit'")
+                    return False
             self.connection.autocommit = True
             cursor = self.connection.cursor()
             cursor.execute(sql)
@@ -134,6 +146,11 @@ class PgDBMS(DBMSTemplate):
         return result
         
     def check_knob_exists(self, knob):
+        if self.connection is None:
+            logger.warning("Connection is None, attempting to reconnect...")
+            success = self._connect()
+            if not success or self.connection is None:
+                return False
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM pg_settings WHERE name = %s", (knob,))
         row = cursor.fetchone()
@@ -143,6 +160,11 @@ class PgDBMS(DBMSTemplate):
     def exec_quries(self, sql):
         """ Executes all SQL queries in given file and returns success flag. """
         try:
+            if self.connection is None:
+                logger.warning("Connection is None, attempting to reconnect...")
+                success = self._connect()
+                if not success or self.connection is None:
+                    return False
             self.connection.autocommit = True
             cursor = self.connection.cursor()
             sql_statements = sql.split(';')
@@ -155,3 +177,27 @@ class PgDBMS(DBMSTemplate):
         except Exception as e:
             print(f'Exception execution {sql}: {e}')
         return False
+    
+    def get_data_size(self):
+        """ Get the size of the database in MB """
+        dbname = self.db
+        sql = f"SELECT pg_database_size('{dbname}') / 1024.0 / 1024.0 as size_mb;"
+        result, _ = self.get_sql_result(sql)
+        db_size = float(result[0][0])
+        return db_size
+    
+    def get_tables_info(self):
+        """ Get table names and row counts """
+        try:
+            sql = """
+                SELECT schemaname || '.' || relname as table_name, 
+                       n_live_tup as row_count
+                FROM pg_stat_user_tables
+                ORDER BY schemaname, relname;
+            """
+            result, _ = self.get_sql_result(sql)
+            table_rows = [f"{table_name}({row_count})" for table_name, row_count in result]
+            return ",".join(table_rows)
+        except Exception as e:
+            logger.warning(f'Exception getting table info: {e}')
+            return None
