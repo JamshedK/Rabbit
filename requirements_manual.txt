@@ -1,0 +1,10 @@
+pip install torch==2.5.1
+pip install graphrag==0.4.1
+pip install langchain==0.3.6 langchain-openai langchain-anthropic langchain-chroma langchain-community langchain-core
+pip install smac==2.2.0
+pip install mysql-connector-python psycopg2-binary
+pip install yfiles-jupyter-graphs ipython pylance lark
+pip install langgraph==0.2.45
+pip install langchain-text-splitters
+pip install torch==2.5.1
+pip install botorch==0.12.0
