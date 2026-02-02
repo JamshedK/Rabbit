@@ -133,7 +133,7 @@ snapshots:
   raw_entities: false
   top_level_nodes: false
 
-local_search:
+# local_search:
   # text_unit_prop: 0.5
   # community_prop: 0.1
   # conversation_history_max_turns: 5
@@ -144,7 +144,7 @@ local_search:
   # llm_n: 1 # Number of completions to generate
   # max_tokens: 12000
 
-global_search:
+# global_search:
   # llm_temperature: 0 # temperature for sampling
   # llm_top_p: 1 # top-p sampling
   # llm_n: 1 # Number of completions to generate

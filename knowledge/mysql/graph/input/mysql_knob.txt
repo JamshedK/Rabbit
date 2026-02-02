@@ -1,5 +1,5 @@
 
-{
+[{
 "name": "tmp_table_size",
 "description": "Defines the maximum size of internal in-memory temporary tables created by the MEMORY storage engine and, as of MySQL 8.0.28, the TempTable storage engine. If an internal in-memory temporary table exceeds this size, it is automatically converted to an on-disk internal temporary table. The tmp_table_size variable does not apply to user-created MEMORY tables. User-created TempTable tables are not supported. When using the MEMORY storage engine for internal in-memory temporary tables, the actual size limit is the smaller of tmp_table_size and max_heap_table_size. The max_heap_table_size setting does not apply to TempTable tables. Increase the value of tmp_table_size (and max_heap_table_size if necessary when using the MEMORY storage engine for internal in-memory temporary tables) if you do many advanced GROUP BY queries and you have lots of memory."
 },
@@ -17,7 +17,7 @@
 },
 {
 "name": "innodb_buffer_pool_size",
-"description":"The size in bytes of the buffer pool, the memory area where InnoDB caches table and index data. The maximum value depends on the CPU architecture. When the size of the buffer pool is greater than 1GB, setting innodb_buffer_pool_instances to a value greater than 1 can improve the scalability on a busy server. A larger buffer pool requires less disk I/O to access the same table data more than once. On a dedicated database server, you might set the buffer pool size to 80% of the machine's physical memory size. "
+"description":"The size in bytes of the buffer pool, the memory area where InnoDB caches table and index data. The maximum value depends on the CPU architecture. When the size of the buffer pool is greater than 1GB, setting innodb_buffer_pool_instances to a value greater than 1 can improve the scalability on a busy server. A larger buffer pool requires less disk I/O to access the same table data more than once. On a dedicated database server, you might set the buffer pool size to 80percent of the machine's physical memory size. "
 },
 {
 "name": "innodb_max_dirty_pages_pct_lwm",
@@ -246,11 +246,11 @@
 },
 {
 "name":"innodb_log_spin_cpu_abs_lwm",
-"description":"Defines the minimum amount of CPU usage below which user threads no longer spin while waiting for flushed redo. The value is expressed as a sum of CPU core usage. For example, The default value of 80 is 80% of a single CPU core. On a system with a multi-core processor, a value of 150 represents 100% usage of one CPU core plus 50% usage of a second CPU core."
+"description":"Defines the minimum amount of CPU usage below which user threads no longer spin while waiting for flushed redo. The value is expressed as a sum of CPU core usage. For example, The default value of 80 is 80percent of a single CPU core. On a system with a multi-core processor, a value of 150 represents 100percent usage of one CPU core plus 50percent usage of a second CPU core."
 },
 {
 "name": "innodb_log_spin_cpu_pct_hwm",
-"description": "Defines the maximum amount of CPU usage above which user threads no longer spin while waiting for flushed redo. The value is expressed as a percentage of the combined total processing power of all CPU cores. The default value is 50%. For example, 100% usage of two CPU cores is 50% of the combined CPU processing power on a server with four CPU cores.The innodb_log_spin_cpu_pct_hwm variable respects processor affinity. For example, if a server has 48 cores but the mysqld process is pinned to only four CPU cores, the other 44 CPU cores are ignored."
+"description": "Defines the maximum amount of CPU usage above which user threads no longer spin while waiting for flushed redo. The value is expressed as a percentage of the combined total processing power of all CPU cores. The default value is 50percent. For example, 100percent usage of two CPU cores is 50percent of the combined CPU processing power on a server with four CPU cores.The innodb_log_spin_cpu_pct_hwm variable respects processor affinity. For example, if a server has 48 cores but the mysqld process is pinned to only four CPU cores, the other 44 CPU cores are ignored."
 
 },
 {
@@ -282,3 +282,4 @@
 "name": "temptable_max_ram",
 "description": "Defines the maximum amount of memory that can be occupied by the TempTable storage engine before it starts storing data on disk. The default value is 1073741824 bytes (1GiB). "
 }
+]
