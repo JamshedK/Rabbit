@@ -1,3 +1,13 @@
-sudo rm /home/ubuntu/pgsql/bin/RAGTuner/postgresql.auto.conf
+#!/bin/bash
+set -e
+
+echo "📦 Removing corrupted postgresql.auto.conf..."
+sudo rm -f /var/lib/postgresql/14/main/postgresql.auto.conf
+
+echo "⏳ Waiting briefly..."
 sleep 2
-su - ubuntu -c '/home/ubuntu/pgsql/bin/pg_ctl restart -D /home/ubuntu/pgsql/bin/RAGTuner -o "-c config_file=/home/ubuntu/pgsql/bin/RAGTuner/postgresql.conf"'
+
+echo "🔁 Restarting PostgreSQL using pg_ctlcluster..."
+sudo pg_ctlcluster 14 main restart
+
+echo "✅ PostgreSQL restarted successfully."
