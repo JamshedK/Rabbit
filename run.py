@@ -2,6 +2,7 @@ from configparser import ConfigParser
 import argparse
 import time
 import os
+import json
 from dotenv import load_dotenv
 from dbms.postgres import PgDBMS
 from dbms.mysql import  MysqlDBMS
@@ -40,8 +41,8 @@ if __name__ == '__main__':
     init_configs_path = f"./knowledge/{args.db}/init_configs_{args.test}.json"
     init_configs_perfs_path = f"./knowledge/{args.db}/init_configs_perfs_{args.test}.json"
     incumbents_transfer_path = f"./knowledge/{args.db}/incumbents_transfer_{args.test}.json"
-    extra_knobs_configs_path = f"./knowledge/mysql/extra_knobs_configs_{args.test}.json"
-    rag_method = "graphRAG"
+    extra_knobs_configs_path = f"./knowledge/{args.db}/extra_knobs_configs_{args.test}.json"
+    rag_method = "selfRAG"  # Changed from graphRAG due to LanceDB vector schema incompatibility
     version = "8.0"
 
 
@@ -91,9 +92,22 @@ if __name__ == '__main__':
             test=args.test,
             extra_knobs_configs_path=extra_knobs_configs_path
         )
-        similar_task, weights = transfer.get_similary_task()
-        if not os.path.exists(incumbents_transfer_path):
-            transfer.get_incumbents_transfer(incumbents_transfer_path)
+        
+        # Skip transfer learning if no historical data
+        if transfer.history_bo_data:
+            similar_task, weights = transfer.get_similary_task()
+            if not os.path.exists(incumbents_transfer_path):
+                transfer.get_incumbents_transfer(incumbents_transfer_path)
+        else:
+            similar_task, weights = None, None
+            # Create empty incumbent file to prevent later errors
+            if not os.path.exists(incumbents_transfer_path):
+                with open(incumbents_transfer_path, "w") as f:
+                    json.dump([], f)
+            # Create empty extra_knobs_configs file when no transfer learning data
+            if not os.path.exists(extra_knobs_configs_path):
+                with open(extra_knobs_configs_path, "w") as f:
+                    json.dump({}, f)
 
         # Select target knobs
         knob_selector = KnobSelection(

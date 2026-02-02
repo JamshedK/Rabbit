@@ -83,8 +83,8 @@ def search_local(q):
     )
 
     # parquet files generated from indexing pipeline
-    INPUT_DIR = "./knowledge/graph/output/artifacts"
-    LANCEDB_URI = "./lancedb"
+    INPUT_DIR = "./knowledge/postgres/graph/output/artifacts"
+    LANCEDB_URI = "./knowledge/postgres/graph/output/lancedb"
     COMMUNITY_REPORT_TABLE = "create_final_community_reports"
     ENTITY_TABLE = "create_final_nodes"
     ENTITY_EMBEDDING_TABLE = "create_final_entities"
@@ -220,7 +220,7 @@ def search_global(q):
 
     # Global
     # parquet files generated from indexing pipeline
-    INPUT_DIR = "./knowledge/graph/output/artifacts"
+    INPUT_DIR = "./knowledge/postgres/graph/output/artifacts"
     COMMUNITY_REPORT_TABLE = "create_final_community_reports"
     ENTITY_TABLE = "create_final_nodes"
     ENTITY_EMBEDDING_TABLE = "create_final_entities"

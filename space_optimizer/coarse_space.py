@@ -30,8 +30,15 @@ class CoarseSpace(DefaultSpace):
         
         # from init_stage load the good start point
         with open(self.incumbents_transfer_path, "r") as f:
-            transfer_incumnbent = json.load(f)[-1]
-        transfer_configs = transfer_incumnbent["Configs"]
+            transfer_data = json.load(f)
+        
+        # Handle empty transfer data (no historical data)
+        if transfer_data:
+            transfer_incumnbent = transfer_data[-1]
+            transfer_configs = transfer_incumnbent["Configs"]
+        else:
+            # Use default configs when no transfer learning data available
+            transfer_configs = {}
 
         with open(self.skill_path, 'r') as json_file:
             all_data = json.load(json_file)

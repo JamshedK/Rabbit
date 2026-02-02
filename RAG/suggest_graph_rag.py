@@ -5,7 +5,7 @@ from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_core.messages import SystemMessage
-from langgraph.checkpoint import MemorySaver
+from langgraph.checkpoint.memory import MemorySaver
 from langchain.tools.retriever import create_retriever_tool
 from util.logger_config import logger
 from RAG.grah_rag import search_local, search_global
@@ -404,7 +404,7 @@ class HistoryAgent(RAG):
 
         
         for knob,value in configs.items():
-            if knob in not_in_knobs:
+            if knob in not_in_knobs or len(value["suggested_values"]) == 0:
                 info = self.dbms.knob_info[knob]
                 value = configs[knob]
                 if info["vartype"] in ["integer", "real"]:
