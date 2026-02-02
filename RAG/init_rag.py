@@ -31,7 +31,7 @@ from langchain.agents import create_tool_calling_agent
 from typing import List
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.pydantic_v1 import BaseModel, Field
+from pydantic import BaseModel, Field
 from langchain_core.agents import AgentActionMessageLog, AgentFinish
 from langchain_core.output_parsers import StrOutputParser
 # class Response(BaseModel):
@@ -140,7 +140,7 @@ class InitRAG(RAG):
             Target Knobs: %s
             Target Knobs Information: {information}
             Hardware Information:
-            The machine running the mysql dbms has a RAM of %d GB, a CPU of %d cores, and a %d GB %s drive.
+            The machine running the postgres 14 dbms has a RAM of %d GB, a CPU of %d cores, and a %d GB %s drive.
             -------------------
             Workload Information:
             The benchmark is %s.
@@ -207,7 +207,7 @@ class InitRAG(RAG):
             Target Knob: %s
             Target Knobs Information: {information}
             Hardware Information:
-            The machine running the mysql dbms has a RAM of %d GB, a CPU of %d cores, and a %d GB %s drive.
+            The machine running the postgres 14 dbms has a RAM of %d GB, a CPU of %d cores, and a %d GB %s drive.
             -------------------
             Workload Information:
             The benchmark is %s.
@@ -288,7 +288,7 @@ class InitRAG(RAG):
             question = """
             Target knobs: %s
             Hardware Information:
-            The machine running the mysql dbms has a RAM of %d GB, a CPU of %d cores, and a %d GB %s drive.
+            The machine running the postgres 14 dbms has a RAM of %d GB, a CPU of %d cores, and a %d GB %s drive.
             -------------------
             Workload Information:
             The benchmark is %s.
@@ -372,7 +372,7 @@ class InitRAG(RAG):
             ---------------------------------------------------------
             Target knobs: %s
             Hardware Information:
-            The machine running the mysql dbms has a RAM of %d GB, a CPU of %d cores, and a %d GB %s drive.
+            The machine running the postgres 14 dbms has a RAM of %d GB, a CPU of %d cores, and a %d GB %s drive.
             -------------------
             Workload Information:
             The benchmark is %s.
