@@ -30,7 +30,7 @@ if __name__ == '__main__':
     # transfer
     task_id = args.task
     data_repo_path = f"./knowledge/{args.db}/repo"
-    performance_metric = ['tps'] # tps or -lat
+    performance_metric = ['-lat'] # tps or -lat
     # set path
     target_knobs_path = f"./knowledge/{args.db}/key_knobs_{args.test}_{task_id}.txt"
     suggested_knobs_path = f"./knowledge/{args.db}/suggested_knobs_value/suggested_knobs_value_{args.test}_{task_id}.json" # need to change
