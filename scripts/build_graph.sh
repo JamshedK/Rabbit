@@ -1,3 +1,3 @@
 cd ../knowledge
-cp ../.env ../knowledge/graph/.env
-graphrag index --root ./graph
+cp ../.env ./mysql/graph/.env
+graphrag index --root ./mysql/graph
