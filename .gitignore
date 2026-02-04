@@ -166,3 +166,5 @@ cython_debug/
 #.idea/
 scripts/common.sh
 util/1.png
+knowledge/postgres/graph
+*.sqlite3
