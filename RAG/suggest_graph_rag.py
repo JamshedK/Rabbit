@@ -5,7 +5,7 @@ from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_core.messages import SystemMessage
-from langgraph.checkpoint import MemorySaver
+from langgraph.checkpoint.memory import MemorySaver
 from langchain.tools.retriever import create_retriever_tool
 from util.logger_config import logger
 from RAG.grah_rag import search_local, search_global
