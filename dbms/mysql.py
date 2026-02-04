@@ -128,7 +128,7 @@ class MysqlDBMS(DBMSTemplate):
         try:
             self.connection.autocommit = True
             cursor = self.connection.cursor(buffered=True)
-            cursor.execute(sql, multi=True)
+            cursor.execute(sql)
             cursor.close()
             return True
         except Exception as e:

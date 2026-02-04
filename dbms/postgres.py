@@ -120,6 +120,7 @@ class PgDBMS(DBMSTemplate):
     def set_knob(self, knob, knob_value):
         query_one = f'alter system set {knob} to \'{knob_value}\';'
         success =  self.update_dbms(query_one)
+        print(f"Set knob {knob} to {knob_value}, success: {success}")
         if success:
             self.config[knob] = knob_value
         return success 

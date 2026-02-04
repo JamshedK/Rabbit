@@ -29,7 +29,7 @@ if __name__ == '__main__':
     # transfer
     task_id = args.task
     data_repo_path = f"./knowledge/{args.db}/repo"
-    performance_metric = ['tps'] # tps or -lat
+    performance_metric = ['-lat'] # tps or -lat
     # set path
     target_knobs_path = f"./knowledge/{args.db}/key_knobs_{args.test}_{task_id}.txt"
     suggested_knobs_path = f"./knowledge/{args.db}/suggested_knobs_value/suggested_knobs_value_{args.test}_{task_id}.json" # need to change
@@ -134,6 +134,7 @@ if __name__ == '__main__':
         objective=performance_metric[0],
         dir_path = f"./optimization_results/{args.db}/first/{args.seed}/"
     )
+    logger.info("Start first stage optimization with trial number 30 and init number 5")
     number = ragtuner_first.tune_end2end(30, 5)
 
     from config_recommender.second_stage import SecondStage
@@ -150,5 +151,6 @@ if __name__ == '__main__':
         dir_path = f"./optimization_results/{args.db}/second/{args.seed}/",
         extra_knob_space=extra_knobs_configs_path
     )
+    logger.info(f"Start second stage optimization with trial number {100-number}")
     ragtuner_second.tune_end2end(100-number)
 
