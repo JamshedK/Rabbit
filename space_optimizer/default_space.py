@@ -29,11 +29,8 @@ class DefaultSpace:
         self.search_space = ConfigurationSpace()
         self.target_knobs = self.knob_select()
         self.target_knobs_num = len(self.target_knobs)
-        if self.test in self.benchmark_copy_db:
-            # self.dbms.create_template(self.test)
-            self.penalty = self.get_default_result()
-        else:
-            self.penalty = 41383858
+        # Always measure default configuration performance as baseline
+        self.penalty = self.get_default_result()
         logger.info(f"DEFAULT : {self.penalty}")
         self.log_file = f"./optimization_results/{self.dbms.name}/log/{self.seed}_log.txt"
         self.init_log_file()
@@ -169,6 +166,7 @@ class DefaultSpace:
         print(f"--- Restore the dbms to default configuration ---")
         dbms.reset_config()
         dbms.reconfigure()
+        logger.info(f"--- Begin to run benchmark {self.test} for default configuration ---")
 
         try:
             # if self.test in self.benchmark_copy_db:
