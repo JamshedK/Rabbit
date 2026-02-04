@@ -235,7 +235,7 @@ starlette==0.41.2
 statsmodels==0.14.4
 sympy==1.13.1
 tblib==3.0.0
-tenacity==8.5.0
+# tenacity==9.1.2
 terminaltables==3.1.10
 threadpoolctl==3.5.0
 tiktoken==0.7.0
