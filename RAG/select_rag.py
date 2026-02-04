@@ -147,7 +147,8 @@ class SelectRAG(RAG):
         NOTE:
         The final knob_names you suggested are different with the KNOB COLLECTION, but in {self.dbms.name}_{self.version}.
         
-        
+        Return ONLY the knob names as a comma-separated list.
+        Example output format: knob1, knob2, knob3
         """
         )
         prompt = ChatPromptTemplate.from_messages([("system", system_prompt), ("human", "{input}")])
@@ -212,7 +213,8 @@ class SelectRAG(RAG):
         NOTE:
         The final knob_names you suggested are different with the KNOB COLLECTION, but in {self.dbms.name}_{self.version}.
         
-        
+        Return ONLY the knob names as a comma-separated list.
+        Example output format: knob1, knob2, knob3
         """
         )
         prompt = ChatPromptTemplate.from_messages([("system", system_prompt), ("human", "{input}")])
@@ -326,7 +328,8 @@ class SelectRAG(RAG):
         The final knob_names you suggested are different with the KNOB COLLECTION, but in {self.dbms.name}_{self.version}.
         Just return the dynamic knob names and split them with ', ', without other.
         
-        
+        Return ONLY the knob names as a comma-separated list.
+        Example output format: knob1, knob2, knob3
         """
         )
         self.model = ChatOpenAI(model=self.model_name, temperature=0.1)
