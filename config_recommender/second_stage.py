@@ -268,6 +268,15 @@ class SecondStage(FineSpace):
             unit = info["unit"]
             max_value = info["max_val"]
             min_value = info["min_val"]
+            
+            # Skip knob if not in extra_knobs_space (no historical data)
+            if knob not in self.extra_knobs_space:
+                logger.info(f"Skipping knob {knob} - not in extra_knobs_space")
+                # Remove from target_knobs since we can't add it
+                if knob in self.target_knobs:
+                    self.target_knobs.remove(knob)
+                continue
+            
             suggested_values_origin = self.extra_knobs_space[knob]
 
             if knob_type == "enum":
@@ -312,6 +321,10 @@ class SecondStage(FineSpace):
                     default_value = str(boot_value),
                 )
             self.search_space.add(new_knob)
+            # Increment counter and add to target_knobs only after successful addition
+            if knob not in self.target_knobs:
+                self.target_knobs.append(knob)
+            self.target_knobs_num += 1
 
     def select_add_knobs(self, epsilon=0.2, num_selection=3):
         # 按照epsilon_greedy
@@ -321,8 +334,7 @@ class SecondStage(FineSpace):
                 selected_knob = self.target_knobs_add[0] 
                 selected_knobs.append(selected_knob)
                 self.target_knobs_add.remove(selected_knob)
-                self.target_knobs.append(selected_knob)
-                self.target_knobs_num +=1
+                # Don't increment here - will be done in change_search_space after successful addition
             elif len(self.target_knobs_add)>1:
                 if random.random() < epsilon :
                     selected_knob = random.choice(self.target_knobs_add[1:])
@@ -330,8 +342,7 @@ class SecondStage(FineSpace):
                     selected_knob = self.target_knobs_add[0] 
                 selected_knobs.append(selected_knob)
                 self.target_knobs_add.remove(selected_knob)
-                self.target_knobs.append(selected_knob)
-                self.target_knobs_num +=1
+                # Don't increment here - will be done in change_search_space after successful addition
             else:
                 logger.info("add knobs over")
                 break
