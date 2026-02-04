@@ -147,7 +147,8 @@ class SelectRAG(RAG):
         NOTE:
         The final knob_names you suggested are different with the KNOB COLLECTION, but in {self.dbms.name}_{self.version}.
         
-        
+        Return ONLY the knob names as a comma-separated list.
+        Example output format: max_worker_processes, parallel_tuple_cost, cpu_tuple_cost
         """
         )
         prompt = ChatPromptTemplate.from_messages([("system", system_prompt), ("human", "{input}")])
@@ -211,7 +212,8 @@ class SelectRAG(RAG):
         Now let us think step by step and just return the the names of the suggested important knobs which are in the current dbms, but not in the knob collection list. Multiple knob names are separated by ','.
         NOTE:
         The final knob_names you suggested are different with the KNOB COLLECTION, but in {self.dbms.name}_{self.version}.
-        
+        Return ONLY the knob names as a comma-separated list.
+        Example output format: max_worker_processes, parallel_tuple_cost, cpu_tuple_cost
         
         """
         )
@@ -325,7 +327,8 @@ class SelectRAG(RAG):
         NOTE:
         The final knob_names you suggested are different with the KNOB COLLECTION, but in {self.dbms.name}_{self.version}.
         Just return the dynamic knob names and split them with ', ', without other.
-        
+        Return ONLY the knob names as a comma-separated list.
+        Example output format: max_worker_processes, parallel_tuple_cost, cpu_tuple_cost
         
         """
         )
