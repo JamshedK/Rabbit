@@ -66,9 +66,71 @@ Modified [coarse_space.py](../space_optimizer/coarse_space.py) to handle empty t
 
 ---
 
+### 5. Dimension Mismatch in Second Stage (RuntimeError)
+**Date:** February 2, 2026
+
+**Error:**
+```
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 20 but got size 23 for tensor number 1 in the list.
+```
+Location: BoTorch optimization in [second_stage.py](../config_recommender/second_stage.py) during GP model training
+
+**Root Cause:**
+The `select_add_knobs()` method incremented `self.target_knobs_num` from 20 to 23, but `change_search_space()` skipped all 3 knobs (not in `extra_knobs_space` due to missing historical data). This created a mismatch:
+- GP model trained on 20-dimensional historical data
+- Optimization bounds created with 23 dimensions (incorrect `target_knobs_num`)
+
+**Solution:**
+Modified [second_stage.py](../config_recommender/second_stage.py):
+1. Removed premature increment in `select_add_knobs()` - don't increment counter until knob is actually added
+2. In `change_search_space()`, remove skipped knobs from `self.target_knobs` list
+3. Only increment `self.target_knobs_num` AFTER successful addition to search space (line 320)
+
+This ensures `self.target_knobs_num` always matches the actual hyperparameter count in `self.search_space`.
+
+---
+
+## Important Configuration Notes
+
+### Performance Metric Selection
+**For TPC-H workloads:** Make sure to change the performance metric in [run.py](../run.py) line 35:
+
+```python
+# For TPC-H (OLAP workload), optimize for latency:
+performance_metric = ['-lat']  # NOT ['tps']
+
+# For TPC-C (OLTP workload), optimize for throughput:
+performance_metric = ['tps']
+```
+
+**Why:** TPC-H is an analytical (OLAP) workload where faster query execution (lower latency) is the goal. TPC-C is transactional (OLTP) where higher throughput (transactions per second) matters more.
+
+---
+
+## Why So Many API Calls??
+
+**FirstStage** is where all the juice happens. Uses `_get_next_point_hybrid()` to generate 10 candidate configs (5 from GP + 5 from LLM). Then `_get_next_point_llm()` evaluates each of those 10 configs by calling the LLM 5 times for ensemble predictions (k=5). 
+
+**Total per iteration: 51 LLM calls**
+- 1 call to generate 5 LLM candidate configs
+- 50 calls to evaluate all 10 candidates (10 configs × 5 predictions each)
+
+**Result:** Only 1 out of 10 evaluated configs gets tested on the actual database. The other 9 are discarded.
+
+**Cost Impact:**
+- With GPT-4o: ~$21 per FirstStage run (~1,275 total calls)
+- With GPT-4o-mini: ~$0.50 per FirstStage run (40x cheaper)
+
+**Potential Optimizations:**
+- Reduce k from 5 to 2 (60% cost reduction)
+- Reduce candidate_nums from 5 to 3 (fewer candidates to evaluate)
+- Switch to GPT-4o-mini in `.env` file
+
+
 ## Notes
 
 - System can run without historical transfer learning data
 - When no transfer data exists, system uses default configurations
 - **Only create directories, never empty JSON files** - let code generate content
 - Directory structure must exist before code writes JSON files
+- **Match performance metric to workload type**: `-lat` for OLAP (TPC-H), `tps` for OLTP (TPC-C)
