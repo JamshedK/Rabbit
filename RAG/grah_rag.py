@@ -100,7 +100,7 @@ def search_local(q):
 # load description embeddings to an in-memory lancedb vectorstore
 # to connect to a remote db, specify url and port values.
     description_embedding_store = LanceDBVectorStore(
-        collection_name="entity_description_embeddings",
+        collection_name="default-entity-description",
     )
     description_embedding_store.connect(db_uri=LANCEDB_URI)
     for attempt in range(5):
@@ -192,8 +192,8 @@ def search_local(q):
         query
     )
         print(result.response)
-        print(result.context_data["entities"].head())
-        print(result.context_data["relationships"].head())
+        # print(result.context_data["entities"].head())
+        # print(result.context_data["relationships"].head())
         # print(result.context_data["reports"].head())
         # print(result.context_data["sources"].head())
         # if "claims" in result.context_data:
