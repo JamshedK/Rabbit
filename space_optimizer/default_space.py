@@ -1,5 +1,6 @@
 from abc import abstractmethod
 from config_recommender.workload_runner import BenchbaseRunner
+from config_recommender.manual_workload_runner import ManualWorkloadRunner
 import time
 import sys
 import threading
@@ -73,6 +74,8 @@ class DefaultSpace:
             'G': 1024 ** 3,
             'B': 1,
             'bytes': 1,
+            'pages': 8 * 1024,  # PostgreSQL page size is 8kB
+            'page': 8 * 1024,
             'us': 0.001,
             'ms': 1,
             's': 1000,
@@ -95,15 +98,17 @@ class DefaultSpace:
             return float(value)
         
     def _reload_data(self):
+        logger.info("Benchmark requires data reload.")
         print("Reloading the data")
         self.dbms._disconnect()
-        self.dbms._connect(f"{self.test}_template")
-        self.dbms.copy_db(target_db="benchbase", source_db=f"{self.test}_template")
+        template_db = f"{self.dbms.db}_template"
+        self.dbms._connect(template_db)
+        self.dbms.copy_db(target_db=self.dbms.db, source_db=template_db)
         print("Reloading completed")
         time.sleep(6)
         self.dbms._disconnect()
         time.sleep(4)
-        self.dbms._connect('benchbase')
+        self.dbms._connect(self.dbms.db)
         time.sleep(6)
 
     def knob_select(self):
@@ -164,6 +169,14 @@ class DefaultSpace:
             )
         return knob
 
+    def _run_manual_workload(self):
+        """Run the workload using ManualWorkloadRunner (used for tpch)."""
+        logger.info("Running manual workload via ManualWorkloadRunner...")
+        runner = ManualWorkloadRunner()
+        runner.data_pre()
+        throughput, total_time = runner.run()
+        return throughput, total_time
+
     def get_default_result(self):
         logger.info("Test the result in default conf")
         dbms = self.dbms
@@ -172,17 +185,20 @@ class DefaultSpace:
         dbms.reconfigure()
 
         try:
-            # if self.test in self.benchmark_copy_db:
-            # # reload the data
-            #     self._reload_data()
-                
-            logger.info("Begin to run benchbase...")
-            runner = BenchbaseRunner(dbms=dbms, test=self.test, target_path=self.summary_path)
-            runner.clear_summary_dir()
-            t = threading.Thread(target=runner.run_benchmark)
-            t.start()
-            t.join()
-            throughput, average_latency = runner.get_throughput(), runner.get_latency()
+            if self.test in self.benchmark_copy_db:
+            # reload the data
+                self._reload_data()
+
+            if self.test == 'tpch':
+                throughput, average_latency = self._run_manual_workload()
+            else:
+                logger.info("Begin to run benchbase...")
+                runner = BenchbaseRunner(dbms=dbms, test=self.test, target_path=self.summary_path)
+                runner.clear_summary_dir()
+                t = threading.Thread(target=runner.run_benchmark)
+                t.start()
+                t.join()
+                throughput, average_latency = runner.get_throughput(), runner.get_latency()
         except Exception as e:
             logger.info(f'Exception for {self.test}: {e}')
 
@@ -208,8 +224,8 @@ class DefaultSpace:
         dbms.reset_config()
         dbms.reconfigure()
         # reload the data
-        # if self.test in self.benchmark_copy_db:
-        #     self._reload_data()
+        if self.test in self.benchmark_copy_db:
+            self._reload_data()
 
         if usecnf:
             print(f"--- knob setting procedure ---")
@@ -221,6 +237,7 @@ class DefaultSpace:
             for knob in self.target_knobs:
                 value = config[knob]
                 dbms.set_knob(knob, value)
+                logger.info(f"Set knob {knob} to value {value}")
             dbms.reconfigure()
         
         if dbms.failed_times == 4:
@@ -236,28 +253,31 @@ class DefaultSpace:
             
 
         try:
-            logger.info("Begin to run benchbase...")
-            runner = BenchbaseRunner(dbms=dbms, test=self.test, target_path=self.summary_path)
-            runner.clear_summary_dir()
-            t = threading.Thread(target=runner.run_benchmark)
-            t.start()
-            t.join(timeout=self.timeout)
-            if t.is_alive():
-                logger.info("Benchmark is still running. Terminate it now.")
-                runner.process.terminate()
-                time.sleep(2)
-                raise RuntimeError("Benchmark is still running. Terminate it now.") 
+            if self.test == 'tpch':
+                logger.info("Running manual workload for tpch...")
+                tps, lat = self._run_manual_workload()
             else:
-                logger.info("Benchmark has finished.")
-                if runner.check_sequence_in_file():  ### 如果query出错
-                    raise RuntimeError("ERROR in Query.") 
-                tps, lat = runner.get_throughput(), runner.get_latency()
+                logger.info("Begin to run benchbase...")
+                runner = BenchbaseRunner(dbms=dbms, test=self.test, target_path=self.summary_path)
+                runner.clear_summary_dir()
+                t = threading.Thread(target=runner.run_benchmark)
+                t.start()
+                t.join(timeout=self.timeout)
+                if t.is_alive():
+                    logger.info("Benchmark is still running. Terminate it now.")
+                    runner.process.terminate()
+                    time.sleep(2)
+                    raise RuntimeError("Benchmark is still running. Terminate it now.")
+                else:
+                    logger.info("Benchmark has finished.")
+                    if runner.check_sequence_in_file():  ### 如果query出错
+                        raise RuntimeError("ERROR in Query.")
+                    tps, lat = runner.get_throughput(), runner.get_latency()
 
-                if self.test not in self.benchmark_latency and tps < self.penalty:
-                    self.penalty = tps
-                if self.test in self.benchmark_latency and lat > self.penalty:
-                    self.penalty = lat
-                
+            if self.test not in self.benchmark_latency and tps < self.penalty:
+                self.penalty = tps
+            if self.test in self.benchmark_latency and lat > self.penalty:
+                self.penalty = lat
 
         except Exception as e:
             logger.info(f'Exception for {self.test}: {e}')
@@ -285,8 +305,8 @@ class DefaultSpace:
         dbms.reconfigure()
 
         # reload the data
-        # if self.test in self.benchmark_copy_db:
-        #     self._reload_data()
+        if self.test in self.benchmark_copy_db:
+            self._reload_data()
         if usecnf:
             print(f"--- knob setting procedure ---")
             #这个函数目前仅针对mysql设计的。
@@ -297,6 +317,7 @@ class DefaultSpace:
             for knob in self.target_knobs:
                 value = config[knob]
                 dbms.set_knob(knob, value)
+                logger.info(f"Set knob {knob} to value {value}")
             dbms.reconfigure()
 
         if dbms.failed_times == 4:
@@ -307,27 +328,31 @@ class DefaultSpace:
                 return self.penalty * 2
             
         try:
-            logger.info("Begin to run benchbase...")
-            runner = BenchbaseRunner(dbms=dbms, test=self.test, target_path=self.summary_path)
-            runner.clear_summary_dir()
-            t = threading.Thread(target=runner.run_benchmark)
-            t.start()
-            t.join(timeout=self.timeout)
-            if t.is_alive():
-                logger.info("Benchmark is still running. Terminate it now.")
-                runner.process.terminate()
-                time.sleep(2)
-                raise RuntimeError("Benchmark is still running. Terminate it now.") 
+            if self.test == 'tpch':
+                logger.info("Running manual workload for tpch...")
+                throughput, average_latency = self._run_manual_workload()
             else:
-                logger.info("Benchmark has finished.")
-                if runner.check_sequence_in_file():  ### 如果query出错
-                    raise RuntimeError("ERROR in Query.") 
-                throughput, average_latency = runner.get_throughput(), runner.get_latency()
+                logger.info("Begin to run benchbase...")
+                runner = BenchbaseRunner(dbms=dbms, test=self.test, target_path=self.summary_path)
+                runner.clear_summary_dir()
+                t = threading.Thread(target=runner.run_benchmark)
+                t.start()
+                t.join(timeout=self.timeout)
+                if t.is_alive():
+                    logger.info("Benchmark is still running. Terminate it now.")
+                    runner.process.terminate()
+                    time.sleep(2)
+                    raise RuntimeError("Benchmark is still running. Terminate it now.")
+                else:
+                    logger.info("Benchmark has finished.")
+                    if runner.check_sequence_in_file():  ### 如果query出错
+                        raise RuntimeError("ERROR in Query.")
+                    throughput, average_latency = runner.get_throughput(), runner.get_latency()
 
-                if self.test not in self.benchmark_latency and throughput < self.penalty:
-                    self.penalty = throughput
-                if self.test in self.benchmark_latency and average_latency > self.penalty:
-                    self.penalty = average_latency
+            if self.test not in self.benchmark_latency and throughput < self.penalty:
+                self.penalty = throughput
+            if self.test in self.benchmark_latency and average_latency > self.penalty:
+                self.penalty = average_latency
 
         except Exception as e:
             logger.info(f'Exception for {self.test}: {e}')
