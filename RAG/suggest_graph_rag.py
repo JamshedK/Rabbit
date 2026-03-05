@@ -161,15 +161,22 @@ class SuggestAgent(RAG):
                 raise ValueError(f"Failed to parse: {self.result}")
             
     def write_list(self):
+        # Try to find JSON in code blocks first
         pattern = r"```json(.*?)```"
-        # pattern = r"```json\s*(\{.*?\}|\[.*?\])\s*```"
-        # logger.info(self.result)
-        match = re.findall(pattern, self.result, re.DOTALL)[0]
+        matches = re.findall(pattern, self.result, re.DOTALL)
+        
+        if matches:
+            match = matches[0]
+        else:
+            # No code blocks found, treat entire response as JSON
+            match = self.result
+        
         try:
-            if match.strip()[0] != '[':
-                results = json.loads('['+match.strip()+']')
+            match_stripped = match.strip()
+            if match_stripped[0] != '[':
+                results = json.loads('['+match_stripped+']')
             else: 
-                results = json.loads(match.strip())
+                results = json.loads(match_stripped)
             return results
 
         except Exception:
