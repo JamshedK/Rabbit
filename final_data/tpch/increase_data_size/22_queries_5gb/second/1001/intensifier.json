@@ -1,0 +1,24 @@
+{
+  "trajectory": [
+    {
+      "config_ids": [
+        1
+      ],
+      "costs": [
+        81.30245995521545
+      ],
+      "trial": 1,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        65
+      ],
+      "costs": [
+        74.25811243057251
+      ],
+      "trial": 65,
+      "walltime": 0.0
+    }
+  ]
+}

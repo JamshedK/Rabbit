@@ -1,0 +1,54 @@
+{
+  "trajectory": [
+    {
+      "config_ids": [
+        1
+      ],
+      "costs": [
+        14.327144145965576
+      ],
+      "trial": 1,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        24
+      ],
+      "costs": [
+        12.391542673110962
+      ],
+      "trial": 24,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        36
+      ],
+      "costs": [
+        11.915247201919556
+      ],
+      "trial": 36,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        39
+      ],
+      "costs": [
+        11.899609327316284
+      ],
+      "trial": 39,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        81
+      ],
+      "costs": [
+        11.869601011276245
+      ],
+      "trial": 81,
+      "walltime": 21.206007480621338
+    }
+  ]
+}

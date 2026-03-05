@@ -1,0 +1,35 @@
+Init_RAG: 
+Total Tokens: 19283
+Input Tokens: 16173. Output Tokens: 3110
+Cost: None
+ 
+Select_RAG: 
+Total Tokens: 1518
+Input Tokens: 550. Output Tokens: 968
+Cost: None
+ 
+Select_RAG: 
+Total Tokens: 8583
+Input Tokens: 8562. Output Tokens: 21
+Cost: None
+ 
+Select_RAG: 
+Total Tokens: 2691
+Input Tokens: 550. Output Tokens: 2141
+Cost: None
+ 
+Select_RAG: 
+Total Tokens: 8511
+Input Tokens: 8487. Output Tokens: 24
+Cost: None
+ 
+Select_RAG: 
+Total Tokens: 1488
+Input Tokens: 550. Output Tokens: 938
+Cost: None
+ 
+Select_RAG: 
+Total Tokens: 8816
+Input Tokens: 8796. Output Tokens: 20
+Cost: None
+ 

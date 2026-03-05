@@ -172,5 +172,3 @@ knowledge/postgres/graph/output
 knowledge/postgres/graph/logs
 
 *.sqlite3
-
-final_data/

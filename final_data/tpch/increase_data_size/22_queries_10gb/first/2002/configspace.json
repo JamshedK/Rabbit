@@ -1,0 +1,317 @@
+{
+    "hyperparameters": [
+        {
+            "name": "autovacuum",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "on",
+                "off"
+            ]
+        },
+        {
+            "name": "checkpoint_completion_target",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "0.7",
+                "0.725",
+                "0.75",
+                "0.78",
+                "0.79",
+                "0.8",
+                "0.81",
+                "0.8200000000000001",
+                "0.87",
+                "0.885",
+                "0.9"
+            ]
+        },
+        {
+            "name": "default_statistics_target",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "100",
+                "115",
+                "130",
+                "137",
+                "143",
+                "150",
+                "156",
+                "162",
+                "180",
+                "190",
+                "200"
+            ]
+        },
+        {
+            "name": "effective_cache_size",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "524288",
+                "2202009",
+                "2411724",
+                "2621440",
+                "2700083",
+                "2752512",
+                "2778726",
+                "2949120",
+                "3119513",
+                "3145728",
+                "3165388",
+                "3185049",
+                "3263692",
+                "3407872"
+            ]
+        },
+        {
+            "name": "effective_io_concurrency",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1",
+                "75",
+                "87",
+                "100",
+                "112",
+                "120",
+                "125",
+                "135",
+                "150",
+                "155",
+                "160",
+                "170",
+                "185",
+                "200"
+            ]
+        },
+        {
+            "name": "from_collapse_limit",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "8",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+            ]
+        },
+        {
+            "name": "jit",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "on",
+                "off"
+            ]
+        },
+        {
+            "name": "join_collapse_limit",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "8",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+            ]
+        },
+        {
+            "name": "maintenance_work_mem",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "65536",
+                "409600",
+                "466944",
+                "524288",
+                "720896",
+                "851968",
+                "917504",
+                "950272",
+                "1048576",
+                "1153433",
+                "1258291",
+                "1792409",
+                "1944780",
+                "2097152"
+            ]
+        },
+        {
+            "name": "max_parallel_workers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "4",
+                "5",
+                "6",
+                "8"
+            ]
+        },
+        {
+            "name": "max_parallel_workers_per_gather",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "2",
+                "3",
+                "4"
+            ]
+        },
+        {
+            "name": "max_wal_size",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1024",
+                "1792",
+                "1920",
+                "2048",
+                "2560",
+                "3072",
+                "3481",
+                "3788",
+                "4096",
+                "4300",
+                "4505",
+                "5376",
+                "5760",
+                "6144"
+            ]
+        },
+        {
+            "name": "max_worker_processes",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "4",
+                "5",
+                "6",
+                "8"
+            ]
+        },
+        {
+            "name": "min_wal_size",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "80",
+                "740",
+                "882",
+                "1024",
+                "1331",
+                "1556",
+                "1638",
+                "1802",
+                "2048",
+                "2176",
+                "2304",
+                "2473",
+                "2772",
+                "3072"
+            ]
+        },
+        {
+            "name": "random_page_cost",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1.1",
+                "1.175",
+                "1.1875",
+                "1.2",
+                "1.24",
+                "1.27",
+                "1.3",
+                "1.3900000000000001",
+                "1.5499999999999998",
+                "1.68",
+                "1.705",
+                "1.9",
+                "2.1100000000000003",
+                "4.0"
+            ]
+        },
+        {
+            "name": "seq_page_cost",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "0.1",
+                "0.135",
+                "0.1425",
+                "0.15",
+                "0.16",
+                "0.18",
+                "0.19",
+                "0.2",
+                "0.27749999999999997",
+                "0.27999999999999997",
+                "0.36000000000000004",
+                "0.405",
+                "0.52",
+                "1.0"
+            ]
+        },
+        {
+            "name": "shared_buffers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "16384",
+                "842137",
+                "945356",
+                "1048576",
+                "1101004",
+                "1116569",
+                "1153433",
+                "1213644",
+                "1310720",
+                "1330380",
+                "1350041",
+                "1417216",
+                "1495040",
+                "1572864"
+            ]
+        },
+        {
+            "name": "wal_buffers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "512",
+                "1587",
+                "1817",
+                "2048",
+                "2969",
+                "3200",
+                "3648",
+                "3891",
+                "4096",
+                "4608",
+                "5120",
+                "6656",
+                "7424",
+                "8192"
+            ]
+        },
+        {
+            "name": "wal_compression",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "on",
+                "off"
+            ]
+        },
+        {
+            "name": "work_mem",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "4096",
+                "47104",
+                "56320",
+                "65536",
+                "95027",
+                "99328",
+                "115200",
+                "124518",
+                "131072",
+                "147456",
+                "163840",
+                "210534",
+                "236339",
+                "262144"
+            ]
+        }
+    ]
+}

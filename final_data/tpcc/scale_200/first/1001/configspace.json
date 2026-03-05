@@ -1,0 +1,314 @@
+{
+    "hyperparameters": [
+        {
+            "name": "autovacuum_max_workers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "2",
+                "3",
+                "4"
+            ]
+        },
+        {
+            "name": "bgwriter_lru_multiplier",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "2.0",
+                "2.15",
+                "2.3",
+                "2.375",
+                "2.4375",
+                "2.5",
+                "2.5625",
+                "2.625",
+                "2.8",
+                "2.9",
+                "3.0"
+            ]
+        },
+        {
+            "name": "checkpoint_completion_target",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "0.7",
+                "0.73",
+                "0.76",
+                "0.775",
+                "0.7875000000000001",
+                "0.8",
+                "0.8125",
+                "0.8250000000000001",
+                "0.86",
+                "0.88",
+                "0.9"
+            ]
+        },
+        {
+            "name": "checkpoint_flush_after",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "32",
+                "51",
+                "52",
+                "58",
+                "64",
+                "70",
+                "75",
+                "86",
+                "99",
+                "113",
+                "128"
+            ]
+        },
+        {
+            "name": "checkpoint_timeout",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "300",
+                "750",
+                "825",
+                "900",
+                "1012",
+                "1020",
+                "1110",
+                "1125",
+                "1200",
+                "1260",
+                "1320",
+                "1575",
+                "1687",
+                "1800"
+            ]
+        },
+        {
+            "name": "effective_cache_size",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "524288",
+                "1782579",
+                "1939865",
+                "2097152",
+                "2202009",
+                "2306867",
+                "2464153",
+                "2621440",
+                "2660761",
+                "2700083",
+                "2883584",
+                "3014656",
+                "3145728"
+            ]
+        },
+        {
+            "name": "effective_io_concurrency",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1",
+                "30",
+                "60",
+                "75",
+                "87",
+                "100",
+                "112",
+                "125",
+                "160",
+                "180",
+                "200"
+            ]
+        },
+        {
+            "name": "maintenance_work_mem",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "65536",
+                "386662",
+                "455475",
+                "524288",
+                "602931",
+                "606208",
+                "681574",
+                "696320",
+                "786432",
+                "819200",
+                "851968",
+                "950272",
+                "1048576"
+            ]
+        },
+        {
+            "name": "max_parallel_workers_per_gather",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "2",
+                "3",
+                "4"
+            ]
+        },
+        {
+            "name": "max_worker_processes",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "4",
+                "8"
+            ]
+        },
+        {
+            "name": "random_page_cost",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1.1",
+                "1.185",
+                "1.1925",
+                "1.2",
+                "1.28",
+                "1.29",
+                "1.3",
+                "1.3900000000000001",
+                "1.41",
+                "1.435",
+                "1.57",
+                "1.62",
+                "1.68",
+                "4.0"
+            ]
+        },
+        {
+            "name": "seq_page_cost",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1.0",
+                "1.02",
+                "1.04",
+                "1.085",
+                "1.0925",
+                "1.1",
+                "1.1075000000000002",
+                "1.115",
+                "1.18",
+                "1.19",
+                "1.2"
+            ]
+        },
+        {
+            "name": "shared_buffers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "16384",
+                "842137",
+                "945356",
+                "1048576",
+                "1101004",
+                "1116569",
+                "1153433",
+                "1213644",
+                "1310720",
+                "1330380",
+                "1350041",
+                "1417216",
+                "1495040",
+                "1572864"
+            ]
+        },
+        {
+            "name": "synchronous_commit",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "local",
+                "remote_write",
+                "remote_apply",
+                "on",
+                "off"
+            ]
+        },
+        {
+            "name": "temp_buffers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1024",
+                "1484",
+                "1792",
+                "1920",
+                "1945",
+                "2048",
+                "2304",
+                "2560",
+                "3481",
+                "3788",
+                "4096"
+            ]
+        },
+        {
+            "name": "wal_buffers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "512",
+                "1587",
+                "1817",
+                "2048",
+                "2969",
+                "3200",
+                "3648",
+                "3891",
+                "4096",
+                "4608",
+                "5120",
+                "6656",
+                "7424",
+                "8192"
+            ]
+        },
+        {
+            "name": "wal_level",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "minimal",
+                "replica",
+                "logical"
+            ]
+        },
+        {
+            "name": "wal_sync_method",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "fsync",
+                "fdatasync",
+                "open_sync",
+                "open_datasync"
+            ]
+        },
+        {
+            "name": "wal_writer_delay",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "200",
+                "240",
+                "265",
+                "280",
+                "282",
+                "300",
+                "317",
+                "335",
+                "340",
+                "370",
+                "400"
+            ]
+        },
+        {
+            "name": "work_mem",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "4096",
+                "6553",
+                "6758",
+                "7475",
+                "8192",
+                "9011",
+                "9625",
+                "11059",
+                "12697",
+                "14540",
+                "16384"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+  "trajectory": [
+    {
+      "config_ids": [
+        1
+      ],
+      "costs": [
+        108.64541006088257
+      ],
+      "trial": 1,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        7
+      ],
+      "costs": [
+        104.12814450263977
+      ],
+      "trial": 7,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        8
+      ],
+      "costs": [
+        92.82222294807434
+      ],
+      "trial": 8,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        20
+      ],
+      "costs": [
+        92.45459008216858
+      ],
+      "trial": 20,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        45
+      ],
+      "costs": [
+        92.28307580947876
+      ],
+      "trial": 45,
+      "walltime": 0.0
+    },
+    {
+      "config_ids": [
+        72
+      ],
+      "costs": [
+        89.90604996681213
+      ],
+      "trial": 72,
+      "walltime": 99.0812246799469
+    },
+    {
+      "config_ids": [
+        76
+      ],
+      "costs": [
+        86.2745451927185
+      ],
+      "trial": 76,
+      "walltime": 95.43406391143799
+    },
+    {
+      "config_ids": [
+        80
+      ],
+      "costs": [
+        85.84977340698242
+      ],
+      "trial": 80,
+      "walltime": 95.41206407546997
+    }
+  ]
+}

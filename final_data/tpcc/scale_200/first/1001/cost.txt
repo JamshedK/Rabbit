@@ -1,0 +1,1 @@
+Inter 0: input_token(84464; output_token(1976; total_token(86440;)Inter 1: input_token(93699; output_token(1996; total_token(95695;)Inter 2: input_token(103986; output_token(1980; total_token(105966;)

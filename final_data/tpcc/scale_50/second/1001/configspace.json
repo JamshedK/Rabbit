@@ -1,0 +1,187 @@
+{
+    "hyperparameters": [
+        {
+            "name": "autovacuum_max_workers",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 3,
+            "upper": 5,
+            "default": 3,
+            "q": null
+        },
+        {
+            "name": "checkpoint_completion_target",
+            "type": "uniform_float",
+            "log": false,
+            "lower": 0.7,
+            "upper": 0.9,
+            "default": 0.9,
+            "q": null
+        },
+        {
+            "name": "checkpoint_flush_after",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 32,
+            "upper": 128,
+            "default": 32,
+            "q": null
+        },
+        {
+            "name": "checkpoint_timeout",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 300,
+            "upper": 1200,
+            "default": 300,
+            "q": null
+        },
+        {
+            "name": "deadlock_timeout",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 1000,
+            "upper": 3000,
+            "default": 1000,
+            "q": null
+        },
+        {
+            "name": "effective_cache_size",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 524288,
+            "upper": 3145728,
+            "default": 524288,
+            "q": null
+        },
+        {
+            "name": "effective_io_concurrency",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 1,
+            "upper": 200,
+            "default": 1,
+            "q": null
+        },
+        {
+            "name": "maintenance_work_mem",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 65536,
+            "upper": 3145728,
+            "default": 65536,
+            "q": null
+        },
+        {
+            "name": "max_connections",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 100,
+            "upper": 200,
+            "default": 100,
+            "q": null
+        },
+        {
+            "name": "max_wal_size",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 1024,
+            "upper": 3072,
+            "default": 1024,
+            "q": null
+        },
+        {
+            "name": "max_worker_processes",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 4,
+            "upper": 8,
+            "default": 8,
+            "q": null
+        },
+        {
+            "name": "min_wal_size",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 80,
+            "upper": 120,
+            "default": 80,
+            "q": null
+        },
+        {
+            "name": "random_page_cost",
+            "type": "uniform_float",
+            "log": false,
+            "lower": 1.1,
+            "upper": 4.0,
+            "default": 4.0,
+            "q": null
+        },
+        {
+            "name": "shared_buffers",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 16384,
+            "upper": 1310720,
+            "default": 16384,
+            "q": null
+        },
+        {
+            "name": "synchronous_commit",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "local",
+                "remote_write",
+                "remote_apply",
+                "on",
+                "off"
+            ]
+        },
+        {
+            "name": "vacuum_cost_limit",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 200,
+            "upper": 4000,
+            "default": 200,
+            "q": null
+        },
+        {
+            "name": "wal_buffers",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 512,
+            "upper": 8192,
+            "default": 512,
+            "q": null
+        },
+        {
+            "name": "wal_level",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "minimal",
+                "replica",
+                "logical"
+            ]
+        },
+        {
+            "name": "wal_sync_method",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "fsync",
+                "fdatasync",
+                "open_sync",
+                "open_datasync"
+            ]
+        },
+        {
+            "name": "work_mem",
+            "type": "uniform_int",
+            "log": false,
+            "lower": 4096,
+            "upper": 65536,
+            "default": 4096,
+            "q": null
+        }
+    ]
+}

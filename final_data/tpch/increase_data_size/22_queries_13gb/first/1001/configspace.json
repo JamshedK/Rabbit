@@ -1,0 +1,367 @@
+{
+    "hyperparameters": [
+        {
+            "name": "autovacuum_vacuum_scale_factor",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "0.1",
+                "0.115",
+                "0.13",
+                "0.1375",
+                "0.14375",
+                "0.15",
+                "0.15625",
+                "0.1625",
+                "0.18000000000000002",
+                "0.19",
+                "0.2"
+            ]
+        },
+        {
+            "name": "bgwriter_lru_multiplier",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "2.0",
+                "2.15",
+                "2.3",
+                "2.375",
+                "2.4375",
+                "2.5",
+                "2.5625",
+                "2.625",
+                "2.8",
+                "2.9",
+                "3.0"
+            ]
+        },
+        {
+            "name": "checkpoint_completion_target",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "0.7",
+                "0.73",
+                "0.76",
+                "0.775",
+                "0.7875000000000001",
+                "0.8",
+                "0.8125",
+                "0.8250000000000001",
+                "0.86",
+                "0.88",
+                "0.9"
+            ]
+        },
+        {
+            "name": "checkpoint_flush_after",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "32",
+                "46",
+                "56",
+                "60",
+                "64",
+                "72",
+                "80",
+                "108",
+                "118",
+                "128"
+            ]
+        },
+        {
+            "name": "checkpoint_timeout",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "300",
+                "720",
+                "810",
+                "900",
+                "975",
+                "1035",
+                "1087",
+                "1170",
+                "1200",
+                "1275",
+                "1350",
+                "1500",
+                "1650",
+                "1800"
+            ]
+        },
+        {
+            "name": "default_statistics_target",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "100",
+                "130",
+                "160",
+                "175",
+                "187",
+                "200",
+                "212",
+                "225",
+                "260",
+                "280",
+                "300"
+            ]
+        },
+        {
+            "name": "effective_cache_size",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "524288",
+                "2202009",
+                "2411724",
+                "2621440",
+                "2641100",
+                "2686976",
+                "2752512",
+                "2827878",
+                "3001548",
+                "3014656",
+                "3034316",
+                "3053977",
+                "3139174",
+                "3276800"
+            ]
+        },
+        {
+            "name": "effective_io_concurrency",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1",
+                "80",
+                "90",
+                "100",
+                "110",
+                "120",
+                "127",
+                "138",
+                "150",
+                "153",
+                "157",
+                "180",
+                "190",
+                "200"
+            ]
+        },
+        {
+            "name": "join_collapse_limit",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+            ]
+        },
+        {
+            "name": "maintenance_work_mem",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "65536",
+                "409600",
+                "466944",
+                "524288",
+                "720896",
+                "851968",
+                "917504",
+                "950272",
+                "1048576",
+                "1153433",
+                "1258291",
+                "1792409",
+                "1944780",
+                "2097152"
+            ]
+        },
+        {
+            "name": "max_wal_size",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1024",
+                "3174",
+                "3635",
+                "4096",
+                "5939",
+                "6400",
+                "7296",
+                "7782",
+                "8192",
+                "9216",
+                "10240",
+                "13312",
+                "14848",
+                "16384"
+            ]
+        },
+        {
+            "name": "random_page_cost",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "0.1",
+                "0.185",
+                "0.1925",
+                "0.2",
+                "0.27999999999999997",
+                "0.29",
+                "0.3",
+                "0.485",
+                "0.48500000000000004",
+                "0.4899999999999999",
+                "0.6699999999999999",
+                "0.77",
+                "0.8799999999999998",
+                "4.0"
+            ]
+        },
+        {
+            "name": "seq_page_cost",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "0.1",
+                "0.185",
+                "0.19",
+                "0.1925",
+                "0.2",
+                "0.26",
+                "0.27999999999999997",
+                "0.29",
+                "0.3",
+                "0.32000000000000006",
+                "0.33499999999999996",
+                "0.37",
+                "1.0"
+            ]
+        },
+        {
+            "name": "shared_buffers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "16384",
+                "790528",
+                "919552",
+                "1048576",
+                "1051852",
+                "1114112",
+                "1179648",
+                "1181286",
+                "1310720",
+                "1336934",
+                "1339392",
+                "1363148",
+                "1456128",
+                "1572864"
+            ]
+        },
+        {
+            "name": "synchronous_commit",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "local",
+                "remote_write",
+                "remote_apply",
+                "on",
+                "off"
+            ]
+        },
+        {
+            "name": "temp_buffers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "1024",
+                "1740",
+                "1894",
+                "2048",
+                "2969",
+                "3328",
+                "3712",
+                "3891",
+                "4096",
+                "4608",
+                "5120",
+                "6758",
+                "7475",
+                "8192"
+            ]
+        },
+        {
+            "name": "wal_buffers",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "512",
+                "1587",
+                "1817",
+                "2048",
+                "2969",
+                "3200",
+                "3648",
+                "3891",
+                "4096",
+                "4608",
+                "5120",
+                "6656",
+                "7424",
+                "8192"
+            ]
+        },
+        {
+            "name": "wal_writer_delay",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "200",
+                "260",
+                "320",
+                "350",
+                "375",
+                "400",
+                "425",
+                "450",
+                "520",
+                "560",
+                "600"
+            ]
+        },
+        {
+            "name": "wal_writer_flush_after",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "128",
+                "185",
+                "224",
+                "240",
+                "243",
+                "256",
+                "288",
+                "320",
+                "435",
+                "473",
+                "512"
+            ]
+        },
+        {
+            "name": "work_mem",
+            "type": "CategoricalHyperparameter",
+            "choices": [
+                "4096",
+                "12697",
+                "14540",
+                "16384",
+                "23756",
+                "27033",
+                "29900",
+                "31129",
+                "32768",
+                "36044",
+                "39321",
+                "59392",
+                "62464",
+                "65536"
+            ]
+        }
+    ]
+}

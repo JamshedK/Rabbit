@@ -1,0 +1,302 @@
+{
+  "hyperparameters": [
+    {
+      "knob": "max_parallel_workers_per_gather",
+      "suggested_values": [
+        "2",
+        "3",
+        "4"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "1",
+      "max_value": "4"
+    },
+    {
+      "knob": "max_parallel_workers",
+      "suggested_values": [
+        "6",
+        "8",
+        "10"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "4",
+      "max_value": "12"
+    },
+    {
+      "knob": "shared_buffers",
+      "suggested_values": [
+        "6 GB",
+        "8 GB",
+        "10 GB"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "4 GB",
+      "max_value": "12 GB"
+    },
+    {
+      "knob": "seq_page_cost",
+      "suggested_values": [
+        "0.8",
+        "1.0",
+        "1.2"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "0.5",
+      "max_value": "2.0"
+    },
+    {
+      "knob": "max_worker_processes",
+      "suggested_values": [
+        "10",
+        "12",
+        "14"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "8",
+      "max_value": "16"
+    },
+    {
+      "knob": "work_mem",
+      "suggested_values": [
+        "32 MB",
+        "64 MB",
+        "128 MB"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "16 MB",
+      "max_value": "256 MB"
+    },
+    {
+      "knob": "effective_cache_size",
+      "suggested_values": [
+        "20 GB",
+        "23 GB",
+        "25 GB"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "15 GB",
+      "max_value": "28 GB"
+    },
+    {
+      "knob": "default_statistics_target",
+      "suggested_values": [
+        "50",
+        "100",
+        "150"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "10",
+      "max_value": "200"
+    },
+    {
+      "knob": "random_page_cost",
+      "suggested_values": [
+        "1.0",
+        "1.1",
+        "1.2"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "0.8",
+      "max_value": "2.0"
+    },
+    {
+      "knob": "jit",
+      "suggested_values": [
+        "on",
+        "off"
+      ],
+      "probability": [
+        0.6,
+        0.4
+      ],
+      "min_value": "off",
+      "max_value": "on"
+    },
+    {
+      "knob": "join_collapse_limit",
+      "suggested_values": [
+        "8",
+        "12",
+        "16"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "4",
+      "max_value": "18"
+    },
+    {
+      "knob": "from_collapse_limit",
+      "suggested_values": [
+        "8",
+        "12",
+        "16"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "4",
+      "max_value": "18"
+    },
+    {
+      "knob": "effective_io_concurrency",
+      "suggested_values": [
+        "100",
+        "150",
+        "200"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "50",
+      "max_value": "300"
+    },
+    {
+      "knob": "checkpoint_timeout",
+      "suggested_values": [
+        "10 min",
+        "15 min",
+        "20 min"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "5 min",
+      "max_value": "30 min"
+    },
+    {
+      "knob": "checkpoint_completion_target",
+      "suggested_values": [
+        "0.7",
+        "0.8",
+        "0.9"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "0.5",
+      "max_value": "1.0"
+    },
+    {
+      "knob": "maintenance_work_mem",
+      "suggested_values": [
+        "512 MB",
+        "1 GB",
+        "2 GB"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "256 MB",
+      "max_value": "4 GB"
+    },
+    {
+      "knob": "wal_buffers",
+      "suggested_values": [
+        "8 MB",
+        "16 MB",
+        "32 MB"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "4 MB",
+      "max_value": "64 MB"
+    },
+    {
+      "knob": "autovacuum_max_workers",
+      "suggested_values": [
+        "2",
+        "3",
+        "4"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "1",
+      "max_value": "5"
+    },
+    {
+      "knob": "temp_buffers",
+      "suggested_values": [
+        "32 MB",
+        "64 MB",
+        "128 MB"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "16 MB",
+      "max_value": "256 MB"
+    },
+    {
+      "knob": "wal_writer_delay",
+      "suggested_values": [
+        "100 ms",
+        "200 ms",
+        "300 ms"
+      ],
+      "probability": [
+        0.7,
+        0.8,
+        0.9
+      ],
+      "min_value": "50 ms",
+      "max_value": "500 ms"
+    }
+  ]
+}
