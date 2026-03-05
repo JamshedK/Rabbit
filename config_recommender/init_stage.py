@@ -19,11 +19,14 @@ class InitStage(InitSpace):
 
     # skill_path is the init_configs_path
     def transfer_configs(self, knobs_data):
+        logger.info("Transfer the init_configs")
+        logger.info(knobs_data)
         result_data = {}
         for index, knob in enumerate(self.target_knobs):
             info = self.dbms.knob_info[knob]
             
             knob_type = info["vartype"]
+            logger.info(f"Transfer knob: {knob}, info: {info}")
             if knob not in knobs_data.keys():
                 logger.warning(f"No such {knob} knob in init_configs")
                 continue
@@ -31,8 +34,10 @@ class InitStage(InitSpace):
                 sequence = []
                 init_values = knobs_data[knob]
                 if not info["enumvals"][0].isalpha():
+                    logger.info(f"Enum knob {knob} has numeric values, no need to transfer")
                     result_data[knob] = init_values
                     continue
+                logger.info(f"Enum knob {knob} has string values, need to transfer")
                 for value in init_values:
                     for item in info["enumvals"]:
                         if value.lower() == item.lower():
@@ -96,6 +101,7 @@ class InitStage(InitSpace):
                 min_value = int(int(min_value) / 1000)
                 max_value = int(int(max_value) / 1000)
 
+            logger.info(f"Knob: {knob}, type: {knob_type}, boot_value: {boot_value}, min_value: {min_value}, max_value: {max_value}")
             for value in init_values:
                 if value < max_value and value > min_value:
                     sequence.append(value)
@@ -156,7 +162,7 @@ class InitStage(InitSpace):
             knobs_data = json.load(json_file)
 
         knobs_data = self.transfer_configs(knobs_data)
-
+        logger.info("Transferred init configs:")
 
         
         for i in range(init_number):
