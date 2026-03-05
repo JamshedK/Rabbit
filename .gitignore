@@ -8,6 +8,7 @@ __pycache__/
 # log
 /log
 benchbase/
+benchbase_mysql
 optimization_results/
 .vscode/
 knowledge/postgres/repo
@@ -166,5 +167,10 @@ cython_debug/
 #.idea/
 scripts/common.sh
 util/1.png
-knowledge/postgres/graph
+knowledge/postgres/graph/cache
+knowledge/postgres/graph/output
+knowledge/postgres/graph/logs
+
 *.sqlite3
+
+final_data/
