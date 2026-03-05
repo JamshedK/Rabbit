@@ -160,6 +160,8 @@ class InitRAG(RAG):
             Let's step by step.
             """%(",".join(chunk_candidate_knobs), self.ram_size, self.cpu_cores, self.disk_size, self.disk_type, self.worklod_info, self.data_info, init_number, init_number, init_number) 
 
+            logger.info(f'Workload info: {self.worklod_info}')
+            logger.info(f'Data info: {self.data_info}')
             # prompt =  ChatPromptTemplate.from_template(question)
             prompt = ChatPromptTemplate.from_messages(
                 [

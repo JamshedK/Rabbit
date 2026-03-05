@@ -46,12 +46,13 @@ class PgDBMS(DBMSTemplate):
     def copy_db(self, target_db, source_db):
         # for tpcc, recover the data for the target db(benchbase)
         self.update_dbms(f'drop database if exists {target_db}')
-        logger.debug('Dropped old database')
+        logger.info(f'Dropped old database {target_db}')
         self.update_dbms(f'create database {target_db} with template {source_db}')
-        logger.debug('Initialized new database')
+        logger.info(f'create database {target_db} with template {source_db}')
 
     def reset_config(self):
         """ Reset all parameters to default values. """
+        logger.info("alter system reset all applied.")
         self.update_dbms('alter system reset all;')
         
     def reconfigure(self):

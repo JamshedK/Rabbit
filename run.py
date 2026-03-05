@@ -11,6 +11,8 @@ from transfer.transfer import Transfer
 from util.logger_config import logger
 from space_optimizer.knob_selection import KnobSelection
 from RAG.suggest_graph_rag import SuggestRAG
+import sys
+
 
 if __name__ == '__main__':
 
@@ -42,8 +44,8 @@ if __name__ == '__main__':
     init_configs_perfs_path = f"./knowledge/{args.db}/init_configs_perfs_{args.test}.json"
     incumbents_transfer_path = f"./knowledge/{args.db}/incumbents_transfer_{args.test}.json"
     extra_knobs_configs_path = f"./knowledge/{args.db}/extra_knobs_configs_{args.test}.json"
-    rag_method = "selfRAG"  # Changed from graphRAG due to LanceDB vector schema incompatibility
-    version = "8.0"
+    rag_method = "graphRAG"  # Changed from graphRAG due to LanceDB vector schema incompatibility
+    version = "14.20"
 
 
     if args.db == 'postgres':
@@ -79,6 +81,7 @@ if __name__ == '__main__':
             vector_store_path=vector_store_path, 
             init_number=10
         )
+    
 
     # Transfer
     if not os.path.exists(incumbents_transfer_path) or not os.path.exists(target_knobs_path):

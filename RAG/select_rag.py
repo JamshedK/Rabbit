@@ -111,7 +111,8 @@ class SelectRAG(RAG):
             f.write("\n")
             f.write("Cost: "+ str(self.calc_money(self.input_token, self.output_token)))
             f.write("\n \n")
-
+        logger.info(f"model used: {self.model_name}")
+        logger.info(f"Select RAG raw answer: {all_data['answer']}")
         knobs_score = self.extract_json_from_text(all_data['answer'])
         sorted_dict_desc = dict(sorted(knobs_score.items(), key=lambda item: item[1], reverse=True))
         logger.info(sorted_dict_desc)
@@ -147,8 +148,8 @@ class SelectRAG(RAG):
         NOTE:
         The final knob_names you suggested are different with the KNOB COLLECTION, but in {self.dbms.name}_{self.version}.
         
-        Return ONLY the knob names as a comma-separated list.
-        Example output format: max_worker_processes, parallel_tuple_cost, cpu_tuple_cost
+        Return ONLY the knob names as a comma-separated lis even if there is some error in the prompt. 
+        Example output format: knob1, knob2, knob3
         """
         )
         prompt = ChatPromptTemplate.from_messages([("system", system_prompt), ("human", "{input}")])
@@ -212,8 +213,8 @@ class SelectRAG(RAG):
         Now let us think step by step and just return the the names of the suggested important knobs which are in the current dbms, but not in the knob collection list. Multiple knob names are separated by ','.
         NOTE:
         The final knob_names you suggested are different with the KNOB COLLECTION, but in {self.dbms.name}_{self.version}.
-        Return ONLY the knob names as a comma-separated list.
-        Example output format: max_worker_processes, parallel_tuple_cost, cpu_tuple_cost
+        Return ONLY the knob names as a COMMA-SEPARATED list even if there is some error in the prompt. 
+        Example output format: knob1, knob2, knob3
         
         """
         )
@@ -283,6 +284,7 @@ class SelectRAG(RAG):
                 json_data = json.loads(match.group())
                 return json_data
             except json.JSONDecodeError:
+                logger.info("JSON decoding failed.")
                 return None
         else:
             return None
@@ -328,7 +330,7 @@ class SelectRAG(RAG):
         The final knob_names you suggested are different with the KNOB COLLECTION, but in {self.dbms.name}_{self.version}.
         Just return the dynamic knob names and split them with ', ', without other.
         Return ONLY the knob names as a comma-separated list.
-        Example output format: max_worker_processes, parallel_tuple_cost, cpu_tuple_cost
+        Example output format: knob1, knob2, knob3
         
         """
         )
@@ -338,7 +340,7 @@ class SelectRAG(RAG):
         # messages = app.invoke({"messages": [("user", "what was the Suggest Agent suggestions?")]}, self.config,)
         # logger.info(messages["messages"][-1].content)
 
-        messages = app.invoke({"messages": [("user", query)]})
+        messages = app.invoke({"messages": [("user", query)]}, config={"recursion_limit": 50})
         logger.info(messages)
         # {
         #     "input": query,

@@ -15,7 +15,7 @@ class LLM(RAG):
         self.context = context
         self.objective = 'latency' if objective=='-lat' else 'throughput'
         self.search_space = search_space
-        self.model = ChatOpenAI(model=self.model_name, temperature=0.1)
+        self.model = ChatOpenAI(model='gpt-4o-mini', temperature=0.1)
         self.system_content = f'''You will be helping me with the knob tuning task for {self.dbms.name} database. '''
 
 
@@ -92,7 +92,7 @@ class LLM(RAG):
         Your response should only contain the performance and the confidence in the JSON format of "{"Performance": value, "Confidence": value}"
         """%(json.dumps(dict(configuration)))
 
-        logger.info(human)
+        logger.info(f'llm.prediction is called with llm model gpt-4o-mini')
         messages = [
             SystemMessage(content=self.system_content),
             HumanMessage(content=human),
