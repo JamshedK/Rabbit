@@ -127,6 +127,33 @@ performance_metric = ['tps']
 - Switch to GPT-4o-mini in `.env` file
 
 
+---
+
+### 6. GraphRAG LanceDB Vector Schema Error
+**Date:** February 5, 2026
+
+**Error:** `TypeError: Query column vector must be a vector. Got list<item: double>.`
+
+**Root Cause:** LanceDB expects fixed-dimension vectors but GraphRAG creates variable-length lists. [GitHub Issue #1335](https://github.com/microsoft/graphrag/issues/1335)
+
+**Solution:**
+
+1. Fix schema in `/path/to/site-packages/graphrag/vector_stores/lancedb.py` line 57:
+   ```python
+   pa.field("vector", pa.list_(pa.float64(), list_size=1536))  # 1536 for text-embedding-3-small
+   ```
+
+2. Fix collection name in [grah_rag.py](../RAG/grah_rag.py) line 103:
+   ```python
+   collection_name="default-entity-description"  # not "entity_description_embeddings"
+   ```
+
+3. Remove `store_entity_semantic_embeddings()` call (corrupts vector store)
+
+4. Rebuild: `rm -rf knowledge/postgres/graph/output/lancedb && ./scripts/build_graph.sh`
+
+---
+
 ## Notes
 
 - System can run without historical transfer learning data
@@ -134,3 +161,4 @@ performance_metric = ['tps']
 - **Only create directories, never empty JSON files** - let code generate content
 - Directory structure must exist before code writes JSON files
 - **Match performance metric to workload type**: `-lat` for OLAP (TPC-H), `tps` for OLTP (TPC-C)
+- **GraphRAG vector schema must specify fixed dimensions** for LanceDB compatibility
