@@ -57,13 +57,17 @@ class MysqlDBMS(DBMSTemplate):
     def copy_db(self, source_db, target_db):
         ms_clc_prefix = f'mysql -u{self.user} -p{self.password} '
         ms_dump_prefix = f'mysqldump -u{self.user} -p{self.password} '
-        os.system(ms_dump_prefix + f' {source_db} > copy_db_dump')
-        logger.info('Dumped old database')
+        dump_file = f'copy_db_dump_{source_db}'
+        if not os.path.exists(dump_file):
+            os.system(ms_dump_prefix + f' {source_db} > {dump_file}')
+            logger.info('Dumped old database')
+        else:
+            logger.info('Using existing dump file')
         os.system(ms_clc_prefix + f" -e 'drop database if exists {target_db}'")
         logger.info('Dropped old database')
         os.system(ms_clc_prefix + f" -e 'create database {target_db}'")
         logger.info('Created new database')
-        os.system(ms_clc_prefix + f" {target_db} < copy_db_dump")
+        os.system(ms_clc_prefix + f" {target_db} < {dump_file}")
         logger.info('Initialized new database')
 
     def query_one(self, sql):
