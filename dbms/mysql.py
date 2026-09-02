@@ -60,13 +60,13 @@ class MysqlDBMS(DBMSTemplate):
         dump_file = f'copy_db_dump_{source_db}'
         if not os.path.exists(dump_file):
             os.system(ms_dump_prefix + f' {source_db} > {dump_file}')
-            logger.info('Dumped old database')
+            logger.info(f'Dumped old database {source_db} to {dump_file}')
         else:
             logger.info('Using existing dump file')
         os.system(ms_clc_prefix + f" -e 'drop database if exists {target_db}'")
-        logger.info('Dropped old database')
+        logger.info(f'Dropped old database {target_db} if exists')
         os.system(ms_clc_prefix + f" -e 'create database {target_db}'")
-        logger.info('Created new database')
+        logger.info(f'Created new database {target_db}')
         os.system(ms_clc_prefix + f" {target_db} < {dump_file}")
         logger.info('Initialized new database')
 

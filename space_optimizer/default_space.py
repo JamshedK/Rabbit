@@ -169,9 +169,9 @@ class DefaultSpace:
         logger.info(f"--- Begin to run benchmark {self.test} for default configuration ---")
 
         try:
-            # if self.test in self.benchmark_copy_db:
-            # # reload the data
-            #     self._reload_data()
+            if self.test in self.benchmark_copy_db:
+            # reload the data
+                self._reload_data()
                 
             logger.info("Begin to run benchbase...")
             runner = BenchbaseRunner(dbms=dbms, test=self.test, target_path=self.summary_path)
@@ -205,8 +205,8 @@ class DefaultSpace:
         dbms.reset_config()
         dbms.reconfigure()
         # reload the data
-        # if self.test in self.benchmark_copy_db:
-        #     self._reload_data()
+        if self.test in self.benchmark_copy_db:
+            self._reload_data()
 
         if usecnf:
             print(f"--- knob setting procedure ---")
@@ -282,8 +282,8 @@ class DefaultSpace:
         dbms.reconfigure()
 
         # reload the data
-        # if self.test in self.benchmark_copy_db:
-        #     self._reload_data()
+        if self.test in self.benchmark_copy_db:
+            self._reload_data()
         if usecnf:
             print(f"--- knob setting procedure ---")
             #这个函数目前仅针对mysql设计的。
