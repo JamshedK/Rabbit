@@ -1,0 +1,5 @@
+Init_RAG: 
+Total Tokens: 43266
+Input Tokens: 38525. Output Tokens: 4741
+Cost: None
+ 
