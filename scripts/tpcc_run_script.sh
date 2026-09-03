@@ -39,9 +39,9 @@ pkill -f "run.py" 2>/dev/null
 echo "Starting sequential TPC-C optimization runs..."
 
 # Run each optimization sequentially - one completes before the next starts
-# run_with_timing 1001 1
+run_with_timing 1001 1
 # run_with_timing 2002 2
-run_with_timing 3003 3
+# run_with_timing 3003 3
 # run_with_timing 4004 4
 # run_with_timing 5005 5
 

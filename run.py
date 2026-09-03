@@ -81,7 +81,7 @@ if __name__ == '__main__':
             vector_store_path=vector_store_path, 
             init_number=10
         )
-    
+    exit(0)
 
     # Transfer
     if not os.path.exists(incumbents_transfer_path) or not os.path.exists(target_knobs_path):

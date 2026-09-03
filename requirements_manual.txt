@@ -8,3 +8,5 @@ pip install langgraph==0.2.45
 pip install langchain-text-splitters
 pip install torch==2.5.1
 pip install botorch==0.12.0
+pip install pyarrow==15.0.2
+
